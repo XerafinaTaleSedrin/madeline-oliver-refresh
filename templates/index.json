@@ -59,7 +59,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
           }
         }
       },
@@ -152,7 +152,7 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -161,7 +161,7 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -170,7 +170,7 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -197,10 +197,67 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "category_hub": {
+      "type": "category-hub-grid",
+      "blocks": {
+        "for_her": {
+          "type": "tile",
+          "settings": {
+            "label": "For Her"
+          }
+        },
+        "for_him": {
+          "type": "tile",
+          "settings": {
+            "label": "For Him"
+          }
+        },
+        "for_little_ones": {
+          "type": "tile",
+          "settings": {
+            "label": "For Little Ones"
+          }
+        },
+        "for_the_home": {
+          "type": "tile",
+          "settings": {
+            "label": "For the Home"
+          }
+        },
+        "special_occasions": {
+          "type": "tile",
+          "settings": {
+            "label": "Special Occasions"
+          }
+        },
+        "favorite_brands": {
+          "type": "tile",
+          "settings": {
+            "label": "Favorite Brands"
+          }
+        }
+      },
+      "block_order": [
+        "for_her",
+        "for_him",
+        "for_little_ones",
+        "for_the_home",
+        "special_occasions",
+        "favorite_brands"
+      ],
+      "settings": {
+        "heading": "",
+        "aspect_ratio": "4 / 5",
+        "gap": 8,
+        "padding_vertical": 32,
+        "max_width": 1400
+      }
     }
   },
   "order": [
     "image_banner",
+    "category_hub",
     "rich_text",
     "featured_collection",
     "collage",

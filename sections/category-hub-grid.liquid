@@ -1,0 +1,191 @@
+<style>
+  .category-hub-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: {{ section.settings.gap }}px;
+    padding: {{ section.settings.padding_vertical }}px 1.5rem;
+    max-width: {{ section.settings.max_width }}px;
+    margin: 0 auto;
+  }
+  @media (min-width: 750px) {
+    .category-hub-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .category-hub-tile {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    aspect-ratio: {{ section.settings.aspect_ratio }};
+    text-decoration: none;
+    color: inherit;
+    background: rgb(var(--color-background));
+  }
+  .category-hub-tile__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 600ms ease;
+  }
+  .category-hub-tile:hover .category-hub-tile__image {
+    transform: scale(1.04);
+  }
+  .category-hub-tile__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,0.45) 100%);
+  }
+  .category-hub-tile__label {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 1.25rem;
+    text-align: center;
+    color: #fff;
+    font-family: var(--font-heading-family), serif;
+    font-size: clamp(1.1rem, 1.6vw, 1.5rem);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0 1rem;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.4);
+  }
+  .category-hub-tile__placeholder {
+    position: absolute;
+    inset: 0;
+    background: rgb(var(--color-background-2, 240, 235, 227));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .category-hub-section-heading {
+    text-align: center;
+    font-family: var(--font-heading-family), serif;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    margin: 0 0 1.5rem;
+    padding: 0 1rem;
+  }
+</style>
+
+{%- if section.settings.heading != blank -%}
+  <h2 class="category-hub-section-heading">{{ section.settings.heading }}</h2>
+{%- endif -%}
+
+<div class="category-hub-grid">
+  {%- for block in section.blocks -%}
+    <a
+      href="{{ block.settings.link | default: '#' }}"
+      class="category-hub-tile"
+      {{ block.shopify_attributes }}
+    >
+      {%- if block.settings.image != blank -%}
+        {{ block.settings.image | image_url: width: 1200 | image_tag:
+          class: 'category-hub-tile__image',
+          loading: 'lazy',
+          alt: block.settings.label
+        }}
+      {%- else -%}
+        <div class="category-hub-tile__placeholder">
+          {{ 'collection-2' | placeholder_svg_tag: 'category-hub-tile__image' }}
+        </div>
+      {%- endif -%}
+      <div class="category-hub-tile__overlay"></div>
+      <h3 class="category-hub-tile__label">{{ block.settings.label }}</h3>
+    </a>
+  {%- endfor -%}
+</div>
+
+{% schema %}
+{
+  "name": "Category hub grid",
+  "tag": "section",
+  "class": "section section-category-hub-grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section heading",
+      "default": ""
+    },
+    {
+      "type": "select",
+      "id": "aspect_ratio",
+      "label": "Tile aspect ratio",
+      "options": [
+        { "value": "1 / 1", "label": "Square" },
+        { "value": "4 / 5", "label": "Portrait (4:5)" },
+        { "value": "3 / 4", "label": "Portrait (3:4)" },
+        { "value": "16 / 9", "label": "Landscape (16:9)" }
+      ],
+      "default": "4 / 5"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Tile gap (px)",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical",
+      "label": "Vertical padding (px)",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Max grid width (px)",
+      "min": 800,
+      "max": 1600,
+      "step": 50,
+      "default": 1400
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tile",
+      "name": "Tile",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Tile label",
+          "default": "Category"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Tile image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Tile link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Category hub grid",
+      "blocks": [
+        { "type": "tile", "settings": { "label": "For Her" } },
+        { "type": "tile", "settings": { "label": "For Him" } },
+        { "type": "tile", "settings": { "label": "For Little Ones" } },
+        { "type": "tile", "settings": { "label": "For the Home" } },
+        { "type": "tile", "settings": { "label": "Special Occasions" } },
+        { "type": "tile", "settings": { "label": "Favorite Brands" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
