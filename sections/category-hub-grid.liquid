@@ -36,7 +36,17 @@
   .category-hub-tile__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,0.45) 100%);
+    pointer-events: none;
+    {%- if section.settings.overlay_style == 'white' -%}
+      background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0) {{ section.settings.overlay_start | default: 50 }}%,
+        rgba(255,255,255,0.75) {{ section.settings.overlay_start | plus: 25 | default: 75 }}%,
+        rgba(255,255,255,0.95) 100%
+      );
+    {%- else -%}
+      background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,0.45) 100%);
+    {%- endif -%}
   }
   .category-hub-tile__label {
     position: absolute;
@@ -44,14 +54,23 @@
     right: 0;
     bottom: 1.25rem;
     text-align: center;
-    color: #fff;
     font-family: var(--font-heading-family), serif;
-    font-size: clamp(1.1rem, 1.6vw, 1.5rem);
+    font-size: clamp(
+      {{ section.settings.label_size | times: 0.7 }}rem,
+      2.2vw,
+      {{ section.settings.label_size }}rem
+    );
     letter-spacing: 0.08em;
     text-transform: uppercase;
     margin: 0;
     padding: 0 1rem;
-    text-shadow: 0 1px 8px rgba(0,0,0,0.4);
+    {%- if section.settings.overlay_style == 'white' -%}
+      color: rgb(var(--color-foreground));
+      text-shadow: 0 1px 6px rgba(255,255,255,0.6);
+    {%- else -%}
+      color: #fff;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.4);
+    {%- endif -%}
   }
   .category-hub-tile__placeholder {
     position: absolute;
@@ -186,13 +205,48 @@
       "max": 48,
       "step": 2,
       "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Label appearance"
+    },
+    {
+      "type": "select",
+      "id": "overlay_style",
+      "label": "Overlay style",
+      "info": "White fade puts dark text in a soft white band at the bottom — best for varied / bright imagery. Dark fade puts white text over a dark gradient — best for moody / consistent imagery.",
+      "options": [
+        { "value": "white", "label": "White fade (bottom band, dark text)" },
+        { "value": "dark", "label": "Dark fade (overlay, white text)" }
+      ],
+      "default": "white"
+    },
+    {
+      "type": "range",
+      "id": "label_size",
+      "label": "Label size (rem, desktop max)",
+      "info": "Scales down on smaller screens. Bump up if labels are hard to read on hero imagery.",
+      "min": 1.0,
+      "max": 3.0,
+      "step": 0.1,
+      "default": 1.75
+    },
+    {
+      "type": "range",
+      "id": "overlay_start",
+      "label": "White fade start (% from top)",
+      "info": "Only applies to white fade. Higher = narrower white band at bottom. Lower = white fade reaches further up the tile.",
+      "min": 30,
+      "max": 70,
+      "step": 5,
+      "default": 50
     }
   ],
   "blocks": [
     {
       "type": "tile",
       "name": "Tile",
-      "limit": 6,
+      "limit": 8,
       "settings": [
         {
           "type": "text",
@@ -229,12 +283,14 @@
     {
       "name": "Category hub grid",
       "blocks": [
-        { "type": "tile", "settings": { "label": "For Her" } },
-        { "type": "tile", "settings": { "label": "For Him" } },
-        { "type": "tile", "settings": { "label": "For Little Ones" } },
-        { "type": "tile", "settings": { "label": "For the Home" } },
-        { "type": "tile", "settings": { "label": "Special Occasions" } },
-        { "type": "tile", "settings": { "label": "Favorite Brands" } }
+        { "type": "tile", "settings": { "label": "Men" } },
+        { "type": "tile", "settings": { "label": "Women" } },
+        { "type": "tile", "settings": { "label": "Children" } },
+        { "type": "tile", "settings": { "label": "The Home" } },
+        { "type": "tile", "settings": { "label": "Gifts" } },
+        { "type": "tile", "settings": { "label": "Favorite Brands" } },
+        { "type": "tile", "settings": { "label": "Personal Care" } },
+        { "type": "tile", "settings": { "label": "Sun Valley Exclusives" } }
       ]
     }
   ]
