@@ -181,7 +181,16 @@
           "color_scheme": "scheme-1"
         }
       }
-    }
+    },
+    "brand_headline": "",
+    "animations_hover_elements": "default",
+    "cart_color_scheme": "scheme-1",
+    "logo": null,
+    "brand_image": null,
+    "brand_image_width": 100,
+    "favicon": null,
+    "brand_description": "",
+    "animations_reveal_on_scroll": true
   },
   "presets": {
     "Default": {
@@ -366,7 +375,16 @@
             "color_scheme": "scheme-1"
           }
         }
-      }
+      },
+      "brand_headline": "",
+      "animations_hover_elements": "default",
+      "cart_color_scheme": "scheme-1",
+      "logo": null,
+      "brand_image": null,
+      "brand_image_width": 100,
+      "favicon": null,
+      "brand_description": "",
+      "animations_reveal_on_scroll": true
     }
   }
 }
