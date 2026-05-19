@@ -1,5 +1,42 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Highend_boutique_product_photography_overhead_flat_delpmaspu.jpg",
+        "image_overlay_opacity": 10,
+        "image_height": "small",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-3",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
     "category_hub": {
       "type": "category-hub-grid",
       "blocks": {
@@ -7,42 +44,48 @@
           "type": "tile",
           "settings": {
             "label": "For Her",
-            "asset_filename": "tile-for-her.jpg"
+            "asset_filename": "tile-for-her.jpg",
+            "link": ""
           }
         },
         "for_him": {
           "type": "tile",
           "settings": {
             "label": "For Him",
-            "asset_filename": "tile-for-him.jpg"
+            "asset_filename": "tile-for-him.jpg",
+            "link": ""
           }
         },
         "for_little_ones": {
           "type": "tile",
           "settings": {
             "label": "For Little Ones",
-            "asset_filename": "tile-for-little-ones.jpg"
+            "asset_filename": "tile-for-little-ones.jpg",
+            "link": ""
           }
         },
         "for_the_home": {
           "type": "tile",
           "settings": {
             "label": "For the Home",
-            "asset_filename": "tile-for-the-home.jpg"
+            "asset_filename": "tile-for-the-home.jpg",
+            "link": ""
           }
         },
         "special_occasions": {
           "type": "tile",
           "settings": {
             "label": "Special Occasions",
-            "asset_filename": "tile-special-occasions.jpg"
+            "asset_filename": "tile-special-occasions.jpg",
+            "link": ""
           }
         },
         "favorite_brands": {
           "type": "tile",
           "settings": {
             "label": "Favorite Brands",
-            "asset_filename": "tile-favorite-brands.jpg"
+            "asset_filename": "tile-favorite-brands.jpg",
+            "link": ""
           }
         }
       },
@@ -55,34 +98,13 @@
         "favorite_brands"
       ],
       "settings": {
+        "heading": "",
         "aspect_ratio": "4 / 5",
+        "columns_desktop": 2,
         "gap": 32,
         "padding_vertical": 80,
         "max_width": 1400,
-        "columns_desktop": 2,
         "border_radius": 16
-      }
-    },
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "heading"
-      ],
-      "settings": {
-        "image_height": "small",
-        "image_overlay_opacity": 10,
-        "show_text_box": false,
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "stack_images_on_mobile": true,
-        "show_text_below": false
       }
     }
   },
