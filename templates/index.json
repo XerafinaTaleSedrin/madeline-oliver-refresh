@@ -61,7 +61,7 @@
           "settings": {
             "label": "For Little Ones",
             "asset_filename": "tile-for-little-ones.jpg",
-            "link": ""
+            "link": "shopify://collections/kids"
           }
         },
         "for_the_home": {
@@ -99,12 +99,12 @@
       ],
       "settings": {
         "heading": "",
-        "aspect_ratio": "4 / 5",
+        "aspect_ratio": "1 / 1",
         "columns_desktop": 2,
-        "gap": 32,
+        "gap": 70,
         "padding_vertical": 80,
         "max_width": 1400,
-        "border_radius": 16
+        "border_radius": 26
       }
     }
   },
