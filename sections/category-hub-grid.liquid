@@ -93,6 +93,12 @@
           loading: 'lazy',
           alt: block.settings.label
         }}
+      {%- elsif block.settings.collection != blank and block.settings.collection.image != blank -%}
+        {{ block.settings.collection.image | image_url: width: 1200 | image_tag:
+          class: 'category-hub-tile__image',
+          loading: 'lazy',
+          alt: block.settings.label
+        }}
       {%- elsif block.settings.asset_filename != blank -%}
         <img
           src="{{ block.settings.asset_filename | asset_url }}"
