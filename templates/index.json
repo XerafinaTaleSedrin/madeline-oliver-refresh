@@ -62,9 +62,32 @@
         "columns_desktop": 2,
         "border_radius": 16
       }
+    },
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading"
+      ],
+      "settings": {
+        "image_height": "small",
+        "image_overlay_opacity": 10,
+        "show_text_box": false,
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
     }
   },
   "order": [
+    "image_banner",
     "category_hub"
   ]
 }
