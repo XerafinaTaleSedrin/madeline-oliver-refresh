@@ -45,6 +45,7 @@
           "settings": {
             "label": "For Her",
             "asset_filename": "tile-for-her.jpg",
+            "collection": "for-her",
             "link": ""
           }
         },
@@ -53,6 +54,7 @@
           "settings": {
             "label": "For Him",
             "asset_filename": "tile-for-him.jpg",
+            "collection": "for-him",
             "link": ""
           }
         },
@@ -61,6 +63,7 @@
           "settings": {
             "label": "For Little Ones",
             "asset_filename": "tile-for-little-ones.jpg",
+            "collection": "kids",
             "link": "shopify://collections/kids"
           }
         },
@@ -69,6 +72,7 @@
           "settings": {
             "label": "For the Home",
             "asset_filename": "tile-for-the-home.jpg",
+            "collection": "home-decor",
             "link": ""
           }
         },
@@ -77,6 +81,7 @@
           "settings": {
             "label": "Special Occasions",
             "asset_filename": "tile-special-occasions.jpg",
+            "collection": "gifts",
             "link": ""
           }
         },
@@ -85,6 +90,7 @@
           "settings": {
             "label": "Favorite Brands",
             "asset_filename": "tile-favorite-brands.jpg",
+            "collection": "",
             "link": ""
           }
         }
