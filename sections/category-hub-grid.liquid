@@ -3,13 +3,13 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: {{ section.settings.gap }}px;
-    padding: {{ section.settings.padding_vertical }}px 1.5rem;
+    padding: {{ section.settings.padding_vertical }}px clamp(1.5rem, 5vw, 4rem);
     max-width: {{ section.settings.max_width }}px;
     margin: 0 auto;
   }
   @media (min-width: 750px) {
     .category-hub-grid {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat({{ section.settings.columns_desktop }}, 1fr);
     }
   }
   .category-hub-tile {
@@ -20,6 +20,7 @@
     text-decoration: none;
     color: inherit;
     background: rgb(var(--color-background));
+    border-radius: {{ section.settings.border_radius }}px;
   }
   .category-hub-tile__image {
     position: absolute;
@@ -131,21 +132,30 @@
     },
     {
       "type": "range",
+      "id": "columns_desktop",
+      "label": "Desktop columns",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "range",
       "id": "gap",
       "label": "Tile gap (px)",
       "min": 0,
-      "max": 40,
+      "max": 80,
       "step": 2,
-      "default": 8
+      "default": 32
     },
     {
       "type": "range",
       "id": "padding_vertical",
       "label": "Vertical padding (px)",
       "min": 0,
-      "max": 120,
+      "max": 160,
       "step": 4,
-      "default": 32
+      "default": 80
     },
     {
       "type": "range",
@@ -155,6 +165,15 @@
       "max": 1600,
       "step": 50,
       "default": 1400
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Tile corner radius (px)",
+      "min": 0,
+      "max": 48,
+      "step": 2,
+      "default": 16
     }
   ],
   "blocks": [

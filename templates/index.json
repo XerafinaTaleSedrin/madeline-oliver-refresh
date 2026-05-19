@@ -55,11 +55,12 @@
         "favorite_brands"
       ],
       "settings": {
-        "heading": "",
         "aspect_ratio": "4 / 5",
-        "gap": 8,
-        "padding_vertical": 32,
-        "max_width": 1400
+        "gap": 32,
+        "padding_vertical": 80,
+        "max_width": 1400,
+        "columns_desktop": 2,
+        "border_radius": 16
       }
     }
   },
