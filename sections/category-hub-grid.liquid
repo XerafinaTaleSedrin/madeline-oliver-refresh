@@ -86,6 +86,13 @@
           loading: 'lazy',
           alt: block.settings.label
         }}
+      {%- elsif block.settings.asset_filename != blank -%}
+        <img
+          src="{{ block.settings.asset_filename | asset_url }}"
+          alt="{{ block.settings.label }}"
+          class="category-hub-tile__image"
+          loading="lazy"
+        >
       {%- else -%}
         <div class="category-hub-tile__placeholder">
           {{ 'collection-2' | placeholder_svg_tag: 'category-hub-tile__image' }}
@@ -165,6 +172,12 @@
           "type": "image_picker",
           "id": "image",
           "label": "Tile image"
+        },
+        {
+          "type": "text",
+          "id": "asset_filename",
+          "label": "Asset filename (fallback)",
+          "info": "Use a theme asset (e.g. tile-for-her.jpg) when no media-library image is set."
         },
         {
           "type": "url",

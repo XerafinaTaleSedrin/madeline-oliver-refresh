@@ -204,37 +204,43 @@
         "for_her": {
           "type": "tile",
           "settings": {
-            "label": "For Her"
+            "label": "For Her",
+            "asset_filename": "tile-for-her.jpg"
           }
         },
         "for_him": {
           "type": "tile",
           "settings": {
-            "label": "For Him"
+            "label": "For Him",
+            "asset_filename": "tile-for-him.jpg"
           }
         },
         "for_little_ones": {
           "type": "tile",
           "settings": {
-            "label": "For Little Ones"
+            "label": "For Little Ones",
+            "asset_filename": "tile-for-little-ones.jpg"
           }
         },
         "for_the_home": {
           "type": "tile",
           "settings": {
-            "label": "For the Home"
+            "label": "For the Home",
+            "asset_filename": "tile-for-the-home.jpg"
           }
         },
         "special_occasions": {
           "type": "tile",
           "settings": {
-            "label": "Special Occasions"
+            "label": "Special Occasions",
+            "asset_filename": "tile-special-occasions.jpg"
           }
         },
         "favorite_brands": {
           "type": "tile",
           "settings": {
-            "label": "Favorite Brands"
+            "label": "Favorite Brands",
+            "asset_filename": "tile-favorite-brands.jpg"
           }
         }
       },
