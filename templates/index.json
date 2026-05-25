@@ -89,6 +89,7 @@
           "type": "tile",
           "settings": {
             "label": "Favorite Brands",
+            "image": "shopify://shop_images/IMG_1081.jpg",
             "asset_filename": "tile-favorite-brands.jpg",
             "collection": "our-favorite-brands",
             "link": ""

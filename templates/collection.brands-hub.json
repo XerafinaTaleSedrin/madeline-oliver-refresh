@@ -34,6 +34,7 @@
           "type": "tile",
           "settings": {
             "label": "Cosabella",
+            "image": "shopify://shop_images/cosabella.gif",
             "asset_filename": "",
             "collection": "cosabella",
             "link": ""
@@ -60,9 +61,9 @@
         "tcp": {
           "type": "tile",
           "settings": {
-            "label": "The Cat's Pajamas",
+            "label": "Randimals",
             "asset_filename": "",
-            "collection": "",
+            "collection": "randimals",
             "link": ""
           }
         },
