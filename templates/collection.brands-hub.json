@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner": {
@@ -11,21 +20,82 @@
     "sub_tiles": {
       "type": "category-hub-grid",
       "blocks": {
-        "eberjey": { "type": "tile", "settings": { "label": "Eberjey" } },
-        "cosabella": { "type": "tile", "settings": { "label": "Cosabella" } },
-        "dash_albert": { "type": "tile", "settings": { "label": "Dash & Albert" } },
-        "annie_selke": { "type": "tile", "settings": { "label": "Annie Selke" } },
-        "tcp": { "type": "tile", "settings": { "label": "The Cat's Pajamas" } },
-        "magnetic_me": { "type": "tile", "settings": { "label": "Magnetic Me" } }
+        "eberjey": {
+          "type": "tile",
+          "settings": {
+            "label": "Eberjey",
+            "image": "shopify://shop_images/1708129721469.png",
+            "asset_filename": "",
+            "collection": "eberjey-1",
+            "link": ""
+          }
+        },
+        "cosabella": {
+          "type": "tile",
+          "settings": {
+            "label": "Cosabella",
+            "asset_filename": "",
+            "collection": "cosabella",
+            "link": ""
+          }
+        },
+        "dash_albert": {
+          "type": "tile",
+          "settings": {
+            "label": "Dash & Albert",
+            "asset_filename": "",
+            "collection": "dash-albert",
+            "link": ""
+          }
+        },
+        "annie_selke": {
+          "type": "tile",
+          "settings": {
+            "label": "Annie Selke",
+            "asset_filename": "",
+            "collection": "annie-selke",
+            "link": ""
+          }
+        },
+        "tcp": {
+          "type": "tile",
+          "settings": {
+            "label": "The Cat's Pajamas",
+            "asset_filename": "",
+            "collection": "",
+            "link": ""
+          }
+        },
+        "magnetic_me": {
+          "type": "tile",
+          "settings": {
+            "label": "Magnetic Me",
+            "image": "shopify://shop_images/magnetic_me_2969c015-ac23-43ec-8ce2-224c2fef8bdc.png",
+            "asset_filename": "",
+            "collection": "magnetic-me",
+            "link": ""
+          }
+        }
       },
-      "block_order": ["eberjey", "cosabella", "dash_albert", "annie_selke", "tcp", "magnetic_me"],
+      "block_order": [
+        "eberjey",
+        "cosabella",
+        "dash_albert",
+        "annie_selke",
+        "tcp",
+        "magnetic_me"
+      ],
       "settings": {
+        "heading": "",
         "aspect_ratio": "1 / 1",
+        "columns_desktop": 3,
         "gap": 24,
         "padding_vertical": 48,
         "max_width": 1400,
-        "columns_desktop": 3,
-        "border_radius": 16
+        "border_radius": 16,
+        "overlay_style": "white",
+        "label_size": 1.8,
+        "overlay_start": 50
       }
     },
     "product-grid": {
@@ -33,17 +103,25 @@
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "",
         "image_ratio": "adapt",
+        "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": true,
         "show_rating": false,
+        "quick_add": "none",
         "enable_filtering": true,
+        "filter_type": "horizontal",
         "enable_sorting": true,
-        "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
-  "order": ["banner", "sub_tiles", "product-grid"]
+  "order": [
+    "banner",
+    "sub_tiles",
+    "product-grid"
+  ]
 }

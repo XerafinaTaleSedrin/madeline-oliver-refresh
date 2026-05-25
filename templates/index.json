@@ -90,7 +90,7 @@
           "settings": {
             "label": "Favorite Brands",
             "asset_filename": "tile-favorite-brands.jpg",
-            "collection": "",
+            "collection": "our-favorite-brands",
             "link": ""
           }
         }
@@ -110,7 +110,10 @@
         "gap": 70,
         "padding_vertical": 80,
         "max_width": 1400,
-        "border_radius": 26
+        "border_radius": 26,
+        "overlay_style": "white",
+        "label_size": 1.8,
+        "overlay_start": 50
       }
     }
   },
