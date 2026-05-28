@@ -11,8 +11,8 @@
     "sub_tiles": {
       "type": "category-hub-grid",
       "blocks": {
-        "local_artists": { "type": "tile", "settings": { "label": "Local Artists" } },
-        "limited_editions": { "type": "tile", "settings": { "label": "Limited Editions" } }
+        "local_artists": { "type": "tile", "settings": { "label": "Local Artists", "collection": "local-artists" } },
+        "limited_editions": { "type": "tile", "settings": { "label": "Limited Editions", "collection": "limited-editions" } }
       },
       "block_order": ["local_artists", "limited_editions"],
       "settings": {

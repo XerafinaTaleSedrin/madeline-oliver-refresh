@@ -11,10 +11,10 @@
     "sub_tiles": {
       "type": "category-hub-grid",
       "blocks": {
-        "bridal": { "type": "tile", "settings": { "label": "Bridal" } },
-        "bridesmaids": { "type": "tile", "settings": { "label": "Bridesmaids' Gifts" } },
-        "wedding": { "type": "tile", "settings": { "label": "Wedding Gifts" } },
-        "milestone_adults": { "type": "tile", "settings": { "label": "Milestone Gifts" } }
+        "bridal": { "type": "tile", "settings": { "label": "Bridal", "collection": "bridal-shower-wedding-gifts" } },
+        "bridesmaids": { "type": "tile", "settings": { "label": "Bridesmaids' Gifts", "collection": "bridesmaids-gifts" } },
+        "wedding": { "type": "tile", "settings": { "label": "Wedding Gifts", "collection": "wedding-gifts" } },
+        "milestone_adults": { "type": "tile", "settings": { "label": "Milestone Gifts", "collection": "milestone-gifts-adults" } }
       },
       "block_order": ["bridal", "bridesmaids", "wedding", "milestone_adults"],
       "settings": {

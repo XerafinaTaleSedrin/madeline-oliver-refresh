@@ -11,9 +11,9 @@
     "sub_tiles": {
       "type": "category-hub-grid",
       "blocks": {
-        "loungewear": { "type": "tile", "settings": { "label": "Loungewear" } },
-        "essentials": { "type": "tile", "settings": { "label": "Essentials" } },
-        "gifts": { "type": "tile", "settings": { "label": "Gifts for Him" } }
+        "loungewear": { "type": "tile", "settings": { "label": "Loungewear", "collection": "mens-loungewear" } },
+        "essentials": { "type": "tile", "settings": { "label": "Essentials", "collection": "mens-essentials" } },
+        "gifts": { "type": "tile", "settings": { "label": "Gifts for Him", "collection": "for-him" } }
       },
       "block_order": ["loungewear", "essentials", "gifts"],
       "settings": {

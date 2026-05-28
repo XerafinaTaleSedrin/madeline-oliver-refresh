@@ -11,9 +11,9 @@
     "sub_tiles": {
       "type": "category-hub-grid",
       "blocks": {
-        "body_care": { "type": "tile", "settings": { "label": "Body Care" } },
-        "perfume": { "type": "tile", "settings": { "label": "Perfume & Fragrance" } },
-        "sleep_soundly": { "type": "tile", "settings": { "label": "Sleep Soundly" } }
+        "body_care": { "type": "tile", "settings": { "label": "Body Care", "collection": "body-care-madeline-oliver-sun-valley-boutique" } },
+        "perfume": { "type": "tile", "settings": { "label": "Perfume & Fragrance", "collection": "perfume" } },
+        "sleep_soundly": { "type": "tile", "settings": { "label": "Sleep Soundly", "collection": "sleep-soundly" } }
       },
       "block_order": ["body_care", "perfume", "sleep_soundly"],
       "settings": {

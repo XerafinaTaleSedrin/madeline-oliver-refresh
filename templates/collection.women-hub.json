@@ -34,7 +34,7 @@
           "settings": {
             "label": "Sleep & Lounge",
             "asset_filename": "",
-            "collection": "",
+            "collection": "sleep-lounge",
             "link": ""
           }
         },
@@ -43,7 +43,7 @@
           "settings": {
             "label": "Girls' Night In",
             "asset_filename": "",
-            "collection": "",
+            "collection": "all-girls-night",
             "link": ""
           }
         }
