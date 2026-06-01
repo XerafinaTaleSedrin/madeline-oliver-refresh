@@ -95,6 +95,14 @@
 
 <div class="category-hub-grid">
   {%- for block in section.blocks -%}
+    {%- assign tile_loading = 'lazy' -%}
+    {%- assign tile_fetchpriority = 'auto' -%}
+    {%- if forloop.index <= 3 -%}
+      {%- assign tile_loading = 'eager' -%}
+    {%- endif -%}
+    {%- if forloop.index == 1 -%}
+      {%- assign tile_fetchpriority = 'high' -%}
+    {%- endif -%}
     {%- assign tile_href = '#' -%}
     {%- if block.settings.collection != blank -%}
       {%- assign tile_href = block.settings.collection.url -%}
@@ -109,13 +117,15 @@
       {%- if block.settings.image != blank -%}
         {{ block.settings.image | image_url: width: 1200 | image_tag:
           class: 'category-hub-tile__image',
-          loading: 'lazy',
+          loading: tile_loading,
+          fetchpriority: tile_fetchpriority,
           alt: block.settings.label
         }}
       {%- elsif block.settings.collection != blank and block.settings.collection.image != blank -%}
         {{ block.settings.collection.image | image_url: width: 1200 | image_tag:
           class: 'category-hub-tile__image',
-          loading: 'lazy',
+          loading: tile_loading,
+          fetchpriority: tile_fetchpriority,
           alt: block.settings.label
         }}
       {%- elsif block.settings.asset_filename != blank -%}
@@ -123,7 +133,8 @@
           src="{{ block.settings.asset_filename | asset_url }}"
           alt="{{ block.settings.label }}"
           class="category-hub-tile__image"
-          loading="lazy"
+          loading="{{ tile_loading }}"
+          fetchpriority="{{ tile_fetchpriority }}"
           width="1200"
           height="1500"
         >

@@ -37,6 +37,18 @@
         "show_text_below": false
       }
     },
+    "randimals_spotlight": {
+      "type": "featured-brand-spotlight",
+      "settings": {
+        "collection": "randimals",
+        "image_position": "left",
+        "subheading": "Featured brand",
+        "heading": "Meet the Randimals",
+        "text": "<p>Two animals, one big-hearted message: what makes us different makes all the difference.</p>",
+        "button_label": "Shop Randimals",
+        "color_scheme": "scheme-1"
+      }
+    },
     "category_hub": {
       "type": "category-hub-grid",
       "blocks": {
@@ -120,6 +132,7 @@
   },
   "order": [
     "image_banner",
+    "randimals_spotlight",
     "category_hub"
   ]
 }
