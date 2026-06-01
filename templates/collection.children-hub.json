@@ -73,8 +73,8 @@
         "max_width": 1400,
         "border_radius": 16,
         "overlay_style": "white",
-        "label_size": 1.8,
-        "overlay_start": 50
+        "label_size": 3,
+        "overlay_start": 70
       }
     },
     "product-grid": {
