@@ -9,32 +9,41 @@
  */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "slideshow_3d9L3m": {
+      "type": "slideshow",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "slide_afcRLR": {
+          "type": "slide",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1"
+            "image": "shopify://shop_images/rugs.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "Dash & Albert Rugs",
+            "heading_size": "h0",
+            "subheading": "Idaho's only authorized Dash & Albert vendor. Free sample rugs available in store",
+            "button_label": "Shop Dash & Albert",
+            "link": "shopify://collections/dash-albert",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-2"
           }
         }
       },
       "block_order": [
-        "heading"
+        "slide_afcRLR"
       ],
+      "name": "t:sections.slideshow.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Highend_boutique_product_photography_overhead_flat_delpmaspu.jpg",
-        "image_overlay_opacity": 10,
-        "image_height": "small",
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
         "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "scheme-3",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": false
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
       }
     },
     "randimals_spotlight": {
@@ -131,7 +140,7 @@
     }
   },
   "order": [
-    "image_banner",
+    "slideshow_3d9L3m",
     "randimals_spotlight",
     "category_hub"
   ]
