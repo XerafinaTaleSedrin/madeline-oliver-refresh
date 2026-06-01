@@ -53,6 +53,7 @@
           "type": "tile",
           "settings": {
             "label": "Milestone Gifts",
+            "image": "{{ block.settings.collection.image }}",
             "asset_filename": "",
             "collection": "milestone-gifts-adults",
             "link": ""
