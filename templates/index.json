@@ -12,6 +12,24 @@
     "slideshow_3d9L3m": {
       "type": "slideshow",
       "blocks": {
+        "slide_XLDf64": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/1731647502708.png",
+            "image_overlay_opacity": 0,
+            "heading": "Randimals",
+            "heading_size": "h1",
+            "subheading": "Two animals, one big-hearted message: what makes us different makes all the difference.",
+            "button_label": "Shop Randimals",
+            "link": "shopify://collections/randimals",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-1"
+          }
+        },
         "slide_afcRLR": {
           "type": "slide",
           "settings": {
@@ -32,6 +50,7 @@
         }
       },
       "block_order": [
+        "slide_XLDf64",
         "slide_afcRLR"
       ],
       "name": "t:sections.slideshow.presets.name",
