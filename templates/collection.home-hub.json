@@ -71,9 +71,9 @@
         "padding_vertical": 48,
         "max_width": 1400,
         "border_radius": 16,
-        "overlay_style": "white",
-        "label_size": 1.8,
-        "overlay_start": 50
+        "overlay_style": "dark",
+        "label_size": 3,
+        "overlay_start": 30
       }
     },
     "product-grid": {
