@@ -12,6 +12,24 @@
     "slideshow_3d9L3m": {
       "type": "slideshow",
       "blocks": {
+        "slide_iaKrAg": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Highend_boutique_product_photography_overhead_flat_delpmaspu.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "Surprise & Delight",
+            "heading_size": "h0",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-2"
+          }
+        },
         "slide_XLDf64": {
           "type": "slide",
           "settings": {
@@ -50,6 +68,7 @@
         }
       },
       "block_order": [
+        "slide_iaKrAg",
         "slide_XLDf64",
         "slide_afcRLR"
       ],
