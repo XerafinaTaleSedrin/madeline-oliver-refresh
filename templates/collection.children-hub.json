@@ -44,7 +44,7 @@
             "label": "Milestone Gifts",
             "image": "{{ block.settings.collection.image }}",
             "asset_filename": "",
-            "collection": "milestone-gifts-kids",
+            "collection": "baby-gift-picks",
             "link": ""
           }
         },
