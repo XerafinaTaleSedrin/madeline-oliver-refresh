@@ -60,6 +60,12 @@
           },
           {
             "type": "color",
+            "id": "heading",
+            "label": "Heading color",
+            "info": "Optional. Leave unset to match the text color."
+          },
+          {
+            "type": "color",
             "id": "button",
             "label": "t:settings_schema.colors.settings.button_background.label",
             "default": "#121212"
