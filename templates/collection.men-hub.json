@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner": {
@@ -11,18 +20,52 @@
     "sub_tiles": {
       "type": "category-hub-grid",
       "blocks": {
-        "loungewear": { "type": "tile", "settings": { "label": "Loungewear", "collection": "mens-loungewear" } },
-        "essentials": { "type": "tile", "settings": { "label": "Essentials", "collection": "mens-essentials" } },
-        "gifts": { "type": "tile", "settings": { "label": "Gifts for Him", "collection": "for-him" } }
+        "loungewear": {
+          "type": "tile",
+          "settings": {
+            "label": "Loungewear",
+            "image": "{{ block.settings.collection.image }}",
+            "asset_filename": "",
+            "collection": "mens-loungewear",
+            "link": ""
+          }
+        },
+        "essentials": {
+          "type": "tile",
+          "settings": {
+            "label": "Essentials",
+            "asset_filename": "",
+            "collection": "mens-essentials",
+            "link": ""
+          }
+        },
+        "gifts": {
+          "type": "tile",
+          "settings": {
+            "label": "Gifts for Him",
+            "image": "{{ block.settings.collection.image }}",
+            "asset_filename": "",
+            "collection": "for-him",
+            "link": ""
+          }
+        }
       },
-      "block_order": ["loungewear", "essentials", "gifts"],
+      "block_order": [
+        "loungewear",
+        "essentials",
+        "gifts"
+      ],
       "settings": {
+        "heading": "",
         "aspect_ratio": "4 / 5",
+        "columns_desktop": 3,
         "gap": 24,
         "padding_vertical": 48,
         "max_width": 1400,
-        "columns_desktop": 3,
-        "border_radius": 16
+        "border_radius": 16,
+        "overlay_style": "white",
+        "label_size": 1.8,
+        "overlay_start": 50
       }
     },
     "product-grid": {
@@ -30,17 +73,25 @@
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "",
         "image_ratio": "adapt",
+        "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
+        "quick_add": "none",
         "enable_filtering": true,
+        "filter_type": "horizontal",
         "enable_sorting": true,
-        "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
-  "order": ["banner", "product-grid"]
+  "order": [
+    "banner",
+    "sub_tiles",
+    "product-grid"
+  ]
 }
