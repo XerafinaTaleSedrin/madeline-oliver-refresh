@@ -95,6 +95,9 @@
 
 <div class="category-hub-grid">
   {%- for block in section.blocks -%}
+    {%- if block.settings.collection != blank and block.settings.collection.all_products_count == 0 -%}
+      {%- continue -%}
+    {%- endif -%}
     {%- assign tile_loading = 'lazy' -%}
     {%- assign tile_fetchpriority = 'auto' -%}
     {%- if forloop.index <= 3 -%}
