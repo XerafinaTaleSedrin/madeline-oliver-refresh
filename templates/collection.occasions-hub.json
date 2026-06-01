@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner": {
@@ -11,19 +20,62 @@
     "sub_tiles": {
       "type": "category-hub-grid",
       "blocks": {
-        "bridal": { "type": "tile", "settings": { "label": "Bridal", "collection": "bridal-shower-wedding-gifts" } },
-        "bridesmaids": { "type": "tile", "settings": { "label": "Bridesmaids' Gifts", "collection": "bridesmaids-gifts" } },
-        "wedding": { "type": "tile", "settings": { "label": "Wedding Gifts", "collection": "wedding-gifts" } },
-        "milestone_adults": { "type": "tile", "settings": { "label": "Milestone Gifts", "collection": "milestone-gifts-adults" } }
+        "bridal": {
+          "type": "tile",
+          "settings": {
+            "label": "Bridal",
+            "asset_filename": "",
+            "collection": "bridal-shower-wedding-gifts",
+            "link": ""
+          }
+        },
+        "bridesmaids": {
+          "type": "tile",
+          "settings": {
+            "label": "Bridesmaids' Gifts",
+            "image": "{{ block.settings.collection.image }}",
+            "asset_filename": "",
+            "collection": "bridesmaids-gifts",
+            "link": ""
+          }
+        },
+        "wedding": {
+          "type": "tile",
+          "settings": {
+            "label": "Wedding Gifts",
+            "image": "{{ block.settings.collection.image }}",
+            "asset_filename": "",
+            "collection": "wedding-gifts",
+            "link": ""
+          }
+        },
+        "milestone_adults": {
+          "type": "tile",
+          "settings": {
+            "label": "Milestone Gifts",
+            "asset_filename": "",
+            "collection": "milestone-gifts-adults",
+            "link": ""
+          }
+        }
       },
-      "block_order": ["bridal", "bridesmaids", "wedding", "milestone_adults"],
+      "block_order": [
+        "bridal",
+        "bridesmaids",
+        "wedding",
+        "milestone_adults"
+      ],
       "settings": {
+        "heading": "",
         "aspect_ratio": "4 / 5",
+        "columns_desktop": 4,
         "gap": 24,
         "padding_vertical": 48,
         "max_width": 1400,
-        "columns_desktop": 4,
-        "border_radius": 16
+        "border_radius": 16,
+        "overlay_style": "dark",
+        "label_size": 1.8,
+        "overlay_start": 50
       }
     },
     "product-grid": {
@@ -31,17 +83,25 @@
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "",
         "image_ratio": "adapt",
+        "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
+        "quick_add": "none",
         "enable_filtering": true,
+        "filter_type": "horizontal",
         "enable_sorting": true,
-        "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
-  "order": ["banner", "sub_tiles", "product-grid"]
+  "order": [
+    "banner",
+    "sub_tiles",
+    "product-grid"
+  ]
 }
