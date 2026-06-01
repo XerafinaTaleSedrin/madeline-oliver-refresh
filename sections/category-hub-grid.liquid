@@ -53,6 +53,9 @@
     left: 0;
     right: 0;
     bottom: 1.25rem;
+    width: fit-content;
+    max-width: calc(100% - 1.5rem);
+    margin: 0 auto;
     text-align: center;
     font-family: var(--font-heading-family), serif;
     font-size: clamp(
@@ -62,14 +65,14 @@
     );
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    margin: 0;
-    padding: 0 1rem;
+    padding: 0.35em 0.9em;
+    border-radius: 999px;
     {%- if section.settings.overlay_style == 'white' -%}
       color: rgb(var(--color-foreground));
-      text-shadow: 0 1px 6px rgba(255,255,255,0.6);
+      background: rgba(var(--color-background-2, 250, 246, 241), {{ section.settings.label_box_opacity | default: 65 | divided_by: 100.0 }});
     {%- else -%}
       color: #fff;
-      text-shadow: 0 1px 8px rgba(0,0,0,0.4);
+      background: rgba(0, 0, 0, {{ section.settings.label_box_opacity | default: 65 | divided_by: 100.0 }});
     {%- endif -%}
   }
   .category-hub-tile__placeholder {
@@ -254,6 +257,16 @@
       "max": 70,
       "step": 5,
       "default": 50
+    },
+    {
+      "type": "range",
+      "id": "label_box_opacity",
+      "label": "Label box opacity (%)",
+      "info": "Background box behind each tile label. Lower = more see-through.",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 65
     }
   ],
   "blocks": [
