@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner": {
@@ -11,18 +20,51 @@
     "sub_tiles": {
       "type": "category-hub-grid",
       "blocks": {
-        "body_care": { "type": "tile", "settings": { "label": "Body Care", "collection": "body-care-madeline-oliver-sun-valley-boutique" } },
-        "perfume": { "type": "tile", "settings": { "label": "Perfume & Fragrance", "collection": "perfume" } },
-        "sleep_soundly": { "type": "tile", "settings": { "label": "Sleep Soundly", "collection": "sleep-soundly" } }
+        "body_care": {
+          "type": "tile",
+          "settings": {
+            "label": "Body Care",
+            "asset_filename": "",
+            "collection": "body-care-madeline-oliver-sun-valley-boutique",
+            "link": ""
+          }
+        },
+        "perfume": {
+          "type": "tile",
+          "settings": {
+            "label": "Perfume & Fragrance",
+            "asset_filename": "",
+            "collection": "perfume",
+            "link": ""
+          }
+        },
+        "sleep_soundly": {
+          "type": "tile",
+          "settings": {
+            "label": "Sleep Soundly",
+            "asset_filename": "",
+            "collection": "sleep-soundly",
+            "link": ""
+          }
+        }
       },
-      "block_order": ["body_care", "perfume", "sleep_soundly"],
+      "block_order": [
+        "body_care",
+        "perfume",
+        "sleep_soundly"
+      ],
       "settings": {
+        "heading": "",
         "aspect_ratio": "4 / 5",
+        "columns_desktop": 3,
         "gap": 24,
         "padding_vertical": 48,
         "max_width": 1400,
-        "columns_desktop": 3,
-        "border_radius": 16
+        "border_radius": 16,
+        "overlay_style": "dark",
+        "label_size": 3,
+        "overlay_start": 50,
+        "label_box_opacity": 35
       }
     },
     "product-grid": {
@@ -30,17 +72,25 @@
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "",
         "image_ratio": "adapt",
+        "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
+        "quick_add": "none",
         "enable_filtering": true,
+        "filter_type": "horizontal",
         "enable_sorting": true,
-        "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
-  "order": ["banner", "sub_tiles", "product-grid"]
+  "order": [
+    "banner",
+    "sub_tiles",
+    "product-grid"
+  ]
 }
