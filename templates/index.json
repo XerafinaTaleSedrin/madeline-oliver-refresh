@@ -17,13 +17,14 @@
           "settings": {
             "image": "shopify://shop_images/Highend_boutique_product_photography_overhead_flat_delpmaspu.jpg",
             "image_overlay_opacity": 0,
+            "text_box_opacity": 60,
             "heading": "Surprise & Delight",
             "heading_size": "h0",
             "subheading": "Unique pieces from renowned jewelry artist Gabrielle Sanchez. Available in store only.",
             "button_label": "",
             "link": "",
             "button_style_secondary": false,
-            "show_text_box": false,
+            "show_text_box": true,
             "box_align": "middle-center",
             "text_alignment": "center",
             "text_alignment_mobile": "center",
@@ -35,6 +36,7 @@
           "settings": {
             "image": "shopify://shop_images/1731647502708.png",
             "image_overlay_opacity": 0,
+            "text_box_opacity": 65,
             "heading": "Randimals",
             "heading_size": "h0",
             "subheading": "Two animals, one big-hearted message: what makes us different makes all the difference.",
@@ -53,6 +55,7 @@
           "settings": {
             "image": "shopify://shop_images/rugs.jpg",
             "image_overlay_opacity": 0,
+            "text_box_opacity": 65,
             "heading": "Dash & Albert Rugs",
             "heading_size": "h0",
             "subheading": "Idaho's only authorized Dash & Albert vendor. Free sample rugs available in store",
