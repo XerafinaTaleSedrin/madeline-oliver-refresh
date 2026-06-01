@@ -42,5 +42,5 @@
       }
     }
   },
-  "order": ["banner", "sub_tiles", "product-grid"]
+  "order": ["banner", "product-grid"]
 }
