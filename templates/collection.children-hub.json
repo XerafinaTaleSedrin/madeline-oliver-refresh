@@ -20,15 +20,6 @@
     "sub_tiles": {
       "type": "category-hub-grid",
       "blocks": {
-        "randimals": {
-          "type": "tile",
-          "settings": {
-            "label": "Randimals",
-            "asset_filename": "",
-            "collection": "randimals",
-            "link": ""
-          }
-        },
         "infant": {
           "type": "tile",
           "settings": {
@@ -51,17 +42,27 @@
           "type": "tile",
           "settings": {
             "label": "Milestone Gifts",
+            "image": "{{ block.settings.collection.image }}",
             "asset_filename": "",
             "collection": "milestone-gifts-kids",
+            "link": ""
+          }
+        },
+        "randimals": {
+          "type": "tile",
+          "settings": {
+            "label": "Randimals",
+            "asset_filename": "",
+            "collection": "randimals",
             "link": ""
           }
         }
       },
       "block_order": [
-        "randimals",
         "infant",
         "toddler",
-        "milestone"
+        "milestone",
+        "randimals"
       ],
       "settings": {
         "heading": "",
