@@ -76,6 +76,33 @@
             "collection": "magnetic-me",
             "link": ""
           }
+        },
+        "kai": {
+          "type": "tile",
+          "settings": {
+            "label": "Kai",
+            "asset_filename": "",
+            "collection": "kai",
+            "link": ""
+          }
+        },
+        "finn_emma": {
+          "type": "tile",
+          "settings": {
+            "label": "Finn + Emma",
+            "asset_filename": "",
+            "collection": "finn-emma",
+            "link": ""
+          }
+        },
+        "pullin": {
+          "type": "tile",
+          "settings": {
+            "label": "Pullin",
+            "asset_filename": "",
+            "collection": "pullin",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -84,7 +111,10 @@
         "dash_albert",
         "annie_selke",
         "tcp",
-        "magnetic_me"
+        "magnetic_me",
+        "kai",
+        "finn_emma",
+        "pullin"
       ],
       "settings": {
         "heading": "",

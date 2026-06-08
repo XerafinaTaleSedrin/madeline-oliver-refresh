@@ -56,13 +56,23 @@
             "collection": "randimals",
             "link": ""
           }
+        },
+        "toys": {
+          "type": "tile",
+          "settings": {
+            "label": "Toys & Games",
+            "asset_filename": "",
+            "collection": "toys",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "infant",
         "toddler",
         "milestone",
-        "randimals"
+        "randimals",
+        "toys"
       ],
       "settings": {
         "heading": "",
