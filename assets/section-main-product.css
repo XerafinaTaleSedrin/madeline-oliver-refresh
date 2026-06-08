@@ -1492,3 +1492,14 @@ a.product__text {
     border: none;
   }
 }
+
+/* === M+O product page (Claude 2026-06-08): description font + ~50/50 gutter === */
+.product__info-container .product__description {
+  font-family: var(--font-body-family), sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+@media screen and (min-width: 990px) {
+  .product--medium:not(.product--no-media) .product__info-wrapper { padding-left: 4rem; }
+  .product--medium:not(.product--no-media).product--right .product__info-wrapper { padding-left: 0; padding-right: 4rem; }
+}
