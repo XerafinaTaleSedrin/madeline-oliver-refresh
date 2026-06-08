@@ -12,25 +12,6 @@
     "slideshow_3d9L3m": {
       "type": "slideshow",
       "blocks": {
-        "slide_BgpxjR": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/1732569981480_cdbaf8b3-bb24-46dc-a4da-c06e118a4fa3.png",
-            "image_overlay_opacity": 0,
-            "text_box_opacity": 65,
-            "heading": "Kai Beauty Care",
-            "heading_size": "h1",
-            "subheading": "Exotic fragrances meet natural essences in this cult-following personal care collection",
-            "button_label": "Shop Kai at M+O",
-            "link": "shopify://collections/kai",
-            "button_style_secondary": false,
-            "show_text_box": true,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": "scheme-1"
-          }
-        },
         "slide_bmJY8x": {
           "type": "slide",
           "settings": {
@@ -42,6 +23,25 @@
             "subheading": "Freshen up your home and closet",
             "button_label": "Shop the Latest",
             "link": "shopify://collections/new-1",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-1"
+          }
+        },
+        "slide_BgpxjR": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/1732569981480_cdbaf8b3-bb24-46dc-a4da-c06e118a4fa3.png",
+            "image_overlay_opacity": 0,
+            "text_box_opacity": 65,
+            "heading": "Kai Beauty Care",
+            "heading_size": "h1",
+            "subheading": "Exotic fragrances meet natural essences in this cult-following personal care collection",
+            "button_label": "Shop Kai at M+O",
+            "link": "shopify://collections/kai",
             "button_style_secondary": false,
             "show_text_box": true,
             "box_align": "middle-center",
@@ -109,8 +109,8 @@
         }
       },
       "block_order": [
-        "slide_BgpxjR",
         "slide_bmJY8x",
+        "slide_BgpxjR",
         "slide_iaKrAg",
         "slide_XLDf64",
         "slide_afcRLR"
