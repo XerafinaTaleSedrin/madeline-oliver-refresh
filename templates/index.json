@@ -12,6 +12,25 @@
     "slideshow_3d9L3m": {
       "type": "slideshow",
       "blocks": {
+        "slide_bmJY8x": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/for_her_1_88f1639f-1e48-4823-a984-e062329a11c6.png",
+            "image_overlay_opacity": 0,
+            "text_box_opacity": 65,
+            "heading": "What's New at M + O",
+            "heading_size": "h1",
+            "subheading": "Freshen up your home and closet",
+            "button_label": "Shop the Latest",
+            "link": "shopify://collections/new-1",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-1"
+          }
+        },
         "slide_iaKrAg": {
           "type": "slide",
           "settings": {
@@ -71,6 +90,7 @@
         }
       },
       "block_order": [
+        "slide_bmJY8x",
         "slide_iaKrAg",
         "slide_XLDf64",
         "slide_afcRLR"
@@ -161,10 +181,10 @@
         "gap": 70,
         "padding_vertical": 80,
         "max_width": 1400,
-        "border_radius": 26,
-        "overlay_style": "white",
-        "label_size": 1.8,
-        "overlay_start": 50
+        "card_corner_radius": 30,
+        "card_background": "#f0ebe3",
+        "label_color": "#2c2420",
+        "label_font_size": 1.2
       }
     }
   },
