@@ -20,6 +20,15 @@
     "sub_tiles": {
       "type": "category-hub-grid",
       "blocks": {
+        "tile_ffEi8L": {
+          "type": "tile",
+          "settings": {
+            "label": "Kai",
+            "asset_filename": "",
+            "collection": "kai",
+            "link": ""
+          }
+        },
         "eberjey": {
           "type": "tile",
           "settings": {
@@ -77,16 +86,7 @@
             "link": ""
           }
         },
-        "kai": {
-          "type": "tile",
-          "settings": {
-            "label": "Kai",
-            "asset_filename": "",
-            "collection": "kai",
-            "link": ""
-          }
-        },
-        "finn_emma": {
+        "tile_TN9TJP": {
           "type": "tile",
           "settings": {
             "label": "Finn + Emma",
@@ -95,7 +95,7 @@
             "link": ""
           }
         },
-        "pullin": {
+        "tile_Rt9ByB": {
           "type": "tile",
           "settings": {
             "label": "Pullin",
@@ -106,15 +106,15 @@
         }
       },
       "block_order": [
+        "tile_ffEi8L",
         "eberjey",
         "cosabella",
         "dash_albert",
         "annie_selke",
         "tcp",
         "magnetic_me",
-        "kai",
-        "finn_emma",
-        "pullin"
+        "tile_TN9TJP",
+        "tile_Rt9ByB"
       ],
       "settings": {
         "heading": "",
@@ -122,7 +122,11 @@
         "columns_desktop": 3,
         "gap": 24,
         "padding_vertical": 48,
-        "max_width": 1400
+        "max_width": 1400,
+        "card_corner_radius": 30,
+        "card_background": "#f0ebe3",
+        "label_color": "#2c2420",
+        "label_font_size": 1.2
       }
     },
     "product-grid": {
