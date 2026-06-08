@@ -1496,7 +1496,7 @@ a.product__text {
 /* === M+O product page (Claude 2026-06-08): description font + ~50/50 gutter === */
 .product__info-container .product__description {
   font-family: var(--font-body-family), sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 1.6;
 }
 @media screen and (min-width: 990px) {
