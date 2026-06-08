@@ -1,12 +1,25 @@
-{% comment %} Store info: NAP, hours, contact, socials + LocalBusiness JSON-LD (local GEO signal) for Madeline + Oliver. {% endcomment %}
+{% comment %} Store info: NAP, hours, contact, socials + LocalBusiness JSON-LD. Also harmonizes the stock footer below into one centered cream flow. {% endcomment %}
 {%- style -%}
-  .store-info { text-align: center; padding: 40px clamp(1.5rem, 5vw, 4rem) 12px; font-family: var(--font-body-family), sans-serif; }
+  .store-info { text-align: center; padding: 44px clamp(1.5rem, 5vw, 4rem) 4px; font-family: var(--font-body-family), sans-serif; }
   .store-info__name { font-family: var(--font-heading-family), serif; font-size: clamp(1.4rem, 2.5vw, 1.9rem); margin: 0 0 0.3rem; letter-spacing: 0.02em; }
   .store-info__tagline { font-family: var(--font-heading-family), serif; font-style: italic; font-size: clamp(0.95rem, 1.6vw, 1.15rem); margin: 0 0 0.9rem; opacity: 0.9; }
   .store-info__rows { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem 1.5rem; font-size: 0.95rem; line-height: 1.5; }
   .store-info__rows a, .store-info__social a { color: inherit; text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 1px; }
   .store-info__hours { margin: 0.7rem 0 0; font-size: 0.9rem; opacity: 0.85; }
   .store-info__social { margin-top: 0.85rem; display: flex; gap: 1.25rem; justify-content: center; font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase; }
+
+  /* --- Harmonize the stock footer below into the same centered cream flow --- */
+  .footer { margin-top: 0; }
+  .footer .footer__content-top { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.25rem; }
+  .footer .footer__blocks-wrapper { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem 3rem; width: 100%; }
+  .footer .footer-block { align-items: center; text-align: center; }
+  .footer .footer-block__heading { font-family: var(--font-heading-family), serif; font-weight: 500; letter-spacing: 0.02em; }
+  .footer .footer-block--newsletter { text-align: center; width: 100%; max-width: 460px; margin: 0.5rem auto 0; }
+  .footer .footer__newsletter { margin-inline: auto; }
+  .footer .newsletter-form { justify-content: center; }
+  .footer .footer__content-bottom-wrapper { justify-content: center; }
+  .footer .footer__column--info { justify-content: center; }
+  .footer .footer__copyright { text-align: center; }
 {%- endstyle -%}
 
 <div class="store-info color-{{ section.settings.color_scheme }} gradient">
