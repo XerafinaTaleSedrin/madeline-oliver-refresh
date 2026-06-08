@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner": {
@@ -11,17 +20,31 @@
     "sub_tiles": {
       "type": "category-hub-grid",
       "blocks": {
-        "local_artists": { "type": "tile", "settings": { "label": "Local Artists", "collection": "local-artists" } },
-        "limited_editions": { "type": "tile", "settings": { "label": "Limited Editions", "collection": "limited-editions" } }
+        "local_artists": {
+          "type": "tile",
+          "settings": {
+            "label": "Local Artists",
+            "collection": "local-artists"
+          }
+        },
+        "limited_editions": {
+          "type": "tile",
+          "settings": {
+            "label": "Limited Editions",
+            "collection": "limited-editions"
+          }
+        }
       },
-      "block_order": ["local_artists", "limited_editions"],
+      "block_order": [
+        "local_artists",
+        "limited_editions"
+      ],
       "settings": {
         "aspect_ratio": "4 / 5",
+        "columns_desktop": 2,
         "gap": 24,
         "padding_vertical": 48,
-        "max_width": 1400,
-        "columns_desktop": 2,
-        "border_radius": 16
+        "max_width": 1400
       }
     },
     "product-grid": {
@@ -29,17 +52,21 @@
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
+        "columns_mobile": "2",
         "image_ratio": "square",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
         "enable_filtering": true,
         "enable_sorting": true,
-        "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
-  "order": ["banner", "sub_tiles", "product-grid"]
+  "order": [
+    "banner",
+    "sub_tiles",
+    "product-grid"
+  ]
 }

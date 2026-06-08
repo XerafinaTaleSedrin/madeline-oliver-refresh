@@ -70,11 +70,7 @@
         "columns_desktop": 3,
         "gap": 24,
         "padding_vertical": 48,
-        "max_width": 1400,
-        "border_radius": 16,
-        "overlay_style": "dark",
-        "label_size": 3,
-        "overlay_start": 70
+        "max_width": 1400
       }
     },
     "product-grid": {
