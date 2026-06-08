@@ -1,3 +1,4 @@
+{% comment %} Category hub — card style: image on top, cream label card below. Brand-driven defaults (cream #F0EBE3, near-black #2C2420, 30px radius). {% endcomment %}
 <style>
   .category-hub-grid {
     display: grid;
@@ -12,17 +13,27 @@
       grid-template-columns: repeat({{ section.settings.columns_desktop }}, 1fr);
     }
   }
-  .category-hub-tile {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    aspect-ratio: {{ section.settings.aspect_ratio }};
+  .category-hub-card {
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
-    color: inherit;
-    background: rgb(var(--color-background));
-    border-radius: {{ section.settings.border_radius }}px;
+    background: {{ section.settings.card_background }};
+    border-radius: {{ section.settings.card_corner_radius }}px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(44, 36, 32, 0.10);
+    transition: transform 300ms ease, box-shadow 300ms ease;
   }
-  .category-hub-tile__image {
+  .category-hub-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(44, 36, 32, 0.16);
+  }
+  .category-hub-card__media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: {{ section.settings.aspect_ratio }};
+    overflow: hidden;
+  }
+  .category-hub-card__image {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -30,58 +41,30 @@
     object-fit: cover;
     transition: transform 600ms ease;
   }
-  .category-hub-tile:hover .category-hub-tile__image {
+  .category-hub-card:hover .category-hub-card__image {
     transform: scale(1.04);
   }
-  .category-hub-tile__overlay {
+  .category-hub-card__placeholder {
     position: absolute;
     inset: 0;
-    pointer-events: none;
-    {%- if section.settings.overlay_style == 'white' -%}
-      background: linear-gradient(
-        180deg,
-        rgba(255,255,255,0) {{ section.settings.overlay_start | default: 50 }}%,
-        rgba(255,255,255,0.75) {{ section.settings.overlay_start | plus: 25 | default: 75 }}%,
-        rgba(255,255,255,0.95) 100%
-      );
-    {%- else -%}
-      background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,0.45) 100%);
-    {%- endif -%}
-  }
-  .category-hub-tile__label {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 1.25rem;
-    width: fit-content;
-    max-width: calc(100% - 1.5rem);
-    margin: 0 auto;
-    text-align: center;
-    font-family: var(--font-heading-family), serif;
-    font-size: clamp(
-      {{ section.settings.label_size | times: 0.7 }}rem,
-      2.2vw,
-      {{ section.settings.label_size }}rem
-    );
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 0.35em 0.9em;
-    border-radius: 999px;
-    {%- if section.settings.overlay_style == 'white' -%}
-      color: rgb(var(--color-foreground));
-      background: rgba(var(--color-background-2, 250, 246, 241), {{ section.settings.label_box_opacity | default: 65 | divided_by: 100.0 }});
-    {%- else -%}
-      color: #fff;
-      background: rgba(0, 0, 0, {{ section.settings.label_box_opacity | default: 65 | divided_by: 100.0 }});
-    {%- endif -%}
-  }
-  .category-hub-tile__placeholder {
-    position: absolute;
-    inset: 0;
-    background: rgb(var(--color-background-2, 240, 235, 227));
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #e7e0d6;
+  }
+  .category-hub-card__body {
+    padding: 1.1rem 1rem 1.25rem;
+    text-align: center;
+  }
+  .category-hub-card__label {
+    margin: 0;
+    font-family: var(--font-body-family), sans-serif;
+    font-weight: 500;
+    color: {{ section.settings.label_color }};
+    font-size: clamp({{ section.settings.label_font_size | times: 0.72 }}rem, 2vw, {{ section.settings.label_font_size }}rem);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 1.2;
   }
   .category-hub-section-heading {
     text-align: center;
@@ -115,42 +98,23 @@
     {%- elsif block.settings.link != blank -%}
       {%- assign tile_href = block.settings.link -%}
     {%- endif -%}
-    <a
-      href="{{ tile_href }}"
-      class="category-hub-tile"
-      {{ block.shopify_attributes }}
-    >
-      {%- if block.settings.image != blank -%}
-        {{ block.settings.image | image_url: width: 1200 | image_tag:
-          class: 'category-hub-tile__image',
-          loading: tile_loading,
-          fetchpriority: tile_fetchpriority,
-          alt: block.settings.label
-        }}
-      {%- elsif block.settings.collection != blank and block.settings.collection.image != blank -%}
-        {{ block.settings.collection.image | image_url: width: 1200 | image_tag:
-          class: 'category-hub-tile__image',
-          loading: tile_loading,
-          fetchpriority: tile_fetchpriority,
-          alt: block.settings.label
-        }}
-      {%- elsif block.settings.asset_filename != blank -%}
-        <img
-          src="{{ block.settings.asset_filename | asset_url }}"
-          alt="{{ block.settings.label }}"
-          class="category-hub-tile__image"
-          loading="{{ tile_loading }}"
-          fetchpriority="{{ tile_fetchpriority }}"
-          width="1200"
-          height="1500"
-        >
-      {%- else -%}
-        <div class="category-hub-tile__placeholder">
-          {{ 'collection-2' | placeholder_svg_tag: 'category-hub-tile__image' }}
-        </div>
-      {%- endif -%}
-      <div class="category-hub-tile__overlay"></div>
-      <h3 class="category-hub-tile__label">{{ block.settings.label }}</h3>
+    <a href="{{ tile_href }}" class="category-hub-card" {{ block.shopify_attributes }}>
+      <div class="category-hub-card__media">
+        {%- if block.settings.image != blank -%}
+          {{ block.settings.image | image_url: width: 1200 | image_tag: class: 'category-hub-card__image', loading: tile_loading, fetchpriority: tile_fetchpriority, alt: block.settings.label }}
+        {%- elsif block.settings.collection != blank and block.settings.collection.image != blank -%}
+          {{ block.settings.collection.image | image_url: width: 1200 | image_tag: class: 'category-hub-card__image', loading: tile_loading, fetchpriority: tile_fetchpriority, alt: block.settings.label }}
+        {%- elsif block.settings.asset_filename != blank -%}
+          <img src="{{ block.settings.asset_filename | asset_url }}" alt="{{ block.settings.label }}" class="category-hub-card__image" loading="{{ tile_loading }}" fetchpriority="{{ tile_fetchpriority }}" width="1200" height="1500">
+        {%- else -%}
+          <div class="category-hub-card__placeholder">
+            {{ 'collection-2' | placeholder_svg_tag: 'category-hub-card__image' }}
+          </div>
+        {%- endif -%}
+      </div>
+      <div class="category-hub-card__body">
+        <h3 class="category-hub-card__label">{{ block.settings.label }}</h3>
+      </div>
     </a>
   {%- endfor -%}
 </div>
@@ -161,113 +125,28 @@
   "tag": "section",
   "class": "section section-category-hub-grid",
   "settings": [
-    {
-      "type": "text",
-      "id": "heading",
-      "label": "Section heading"
-    },
+    { "type": "text", "id": "heading", "label": "Section heading" },
     {
       "type": "select",
       "id": "aspect_ratio",
-      "label": "Tile aspect ratio",
+      "label": "Image aspect ratio",
       "options": [
         { "value": "1 / 1", "label": "Square" },
         { "value": "4 / 5", "label": "Portrait (4:5)" },
         { "value": "3 / 4", "label": "Portrait (3:4)" },
         { "value": "16 / 9", "label": "Landscape (16:9)" }
       ],
-      "default": "4 / 5"
+      "default": "1 / 1"
     },
-    {
-      "type": "range",
-      "id": "columns_desktop",
-      "label": "Desktop columns",
-      "min": 1,
-      "max": 4,
-      "step": 1,
-      "default": 2
-    },
-    {
-      "type": "range",
-      "id": "gap",
-      "label": "Tile gap (px)",
-      "min": 0,
-      "max": 80,
-      "step": 2,
-      "default": 32
-    },
-    {
-      "type": "range",
-      "id": "padding_vertical",
-      "label": "Vertical padding (px)",
-      "min": 0,
-      "max": 160,
-      "step": 4,
-      "default": 80
-    },
-    {
-      "type": "range",
-      "id": "max_width",
-      "label": "Max grid width (px)",
-      "min": 800,
-      "max": 1600,
-      "step": 50,
-      "default": 1400
-    },
-    {
-      "type": "range",
-      "id": "border_radius",
-      "label": "Tile corner radius (px)",
-      "min": 0,
-      "max": 48,
-      "step": 2,
-      "default": 16
-    },
-    {
-      "type": "header",
-      "content": "Label appearance"
-    },
-    {
-      "type": "select",
-      "id": "overlay_style",
-      "label": "Overlay style",
-      "info": "White fade puts dark text in a soft white band at the bottom — best for varied / bright imagery. Dark fade puts white text over a dark gradient — best for moody / consistent imagery.",
-      "options": [
-        { "value": "white", "label": "White fade (bottom band, dark text)" },
-        { "value": "dark", "label": "Dark fade (overlay, white text)" }
-      ],
-      "default": "white"
-    },
-    {
-      "type": "range",
-      "id": "label_size",
-      "label": "Label size (rem, desktop max)",
-      "info": "Scales down on smaller screens. Bump up if labels are hard to read on hero imagery.",
-      "min": 1.0,
-      "max": 3.0,
-      "step": 0.1,
-      "default": 1.8
-    },
-    {
-      "type": "range",
-      "id": "overlay_start",
-      "label": "White fade start (% from top)",
-      "info": "Only applies to white fade. Higher = narrower white band at bottom. Lower = white fade reaches further up the tile.",
-      "min": 30,
-      "max": 70,
-      "step": 5,
-      "default": 50
-    },
-    {
-      "type": "range",
-      "id": "label_box_opacity",
-      "label": "Label box opacity (%)",
-      "info": "Background box behind each tile label. Lower = more see-through.",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "default": 65
-    }
+    { "type": "range", "id": "columns_desktop", "label": "Desktop columns", "min": 1, "max": 4, "step": 1, "default": 2 },
+    { "type": "range", "id": "gap", "label": "Card gap (px)", "min": 0, "max": 80, "step": 2, "default": 32 },
+    { "type": "range", "id": "padding_vertical", "label": "Vertical padding (px)", "min": 0, "max": 160, "step": 4, "default": 80 },
+    { "type": "range", "id": "max_width", "label": "Max grid width (px)", "min": 800, "max": 1600, "step": 50, "default": 1400 },
+    { "type": "header", "content": "Card style" },
+    { "type": "range", "id": "card_corner_radius", "label": "Card corner radius (px)", "min": 0, "max": 48, "step": 2, "default": 30 },
+    { "type": "color", "id": "card_background", "label": "Card background (cream)", "default": "#F0EBE3" },
+    { "type": "color", "id": "label_color", "label": "Label color", "default": "#2C2420" },
+    { "type": "range", "id": "label_font_size", "label": "Label size (rem, desktop max)", "min": 1.0, "max": 2.4, "step": 0.1, "default": 1.2 }
   ],
   "blocks": [
     {
@@ -275,34 +154,11 @@
       "name": "Tile",
       "limit": 8,
       "settings": [
-        {
-          "type": "text",
-          "id": "label",
-          "label": "Tile label",
-          "default": "Category"
-        },
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Tile image"
-        },
-        {
-          "type": "text",
-          "id": "asset_filename",
-          "label": "Asset filename (fallback)",
-          "info": "Use a theme asset (e.g. tile-for-her.jpg) when no media-library image is set."
-        },
-        {
-          "type": "collection",
-          "id": "collection",
-          "label": "Linked collection",
-          "info": "Tile links to this collection's page. Overrides the URL field below if set."
-        },
-        {
-          "type": "url",
-          "id": "link",
-          "label": "Tile link (URL override)"
-        }
+        { "type": "text", "id": "label", "label": "Tile label", "default": "Category" },
+        { "type": "image_picker", "id": "image", "label": "Tile image" },
+        { "type": "text", "id": "asset_filename", "label": "Asset filename (fallback)", "info": "Use a theme asset (e.g. tile-for-her.jpg) when no media-library image is set." },
+        { "type": "collection", "id": "collection", "label": "Linked collection", "info": "Tile links to this collection's page. Overrides the URL field below if set." },
+        { "type": "url", "id": "link", "label": "Tile link (URL override)" }
       ]
     }
   ],
@@ -310,14 +166,12 @@
     {
       "name": "Category hub grid",
       "blocks": [
-        { "type": "tile", "settings": { "label": "Men" } },
-        { "type": "tile", "settings": { "label": "Women" } },
-        { "type": "tile", "settings": { "label": "Children" } },
-        { "type": "tile", "settings": { "label": "The Home" } },
-        { "type": "tile", "settings": { "label": "Gifts" } },
-        { "type": "tile", "settings": { "label": "Favorite Brands" } },
-        { "type": "tile", "settings": { "label": "Personal Care" } },
-        { "type": "tile", "settings": { "label": "Sun Valley Exclusives" } }
+        { "type": "tile", "settings": { "label": "For Her" } },
+        { "type": "tile", "settings": { "label": "For Him" } },
+        { "type": "tile", "settings": { "label": "For Little Ones" } },
+        { "type": "tile", "settings": { "label": "For the Home" } },
+        { "type": "tile", "settings": { "label": "Special Occasions" } },
+        { "type": "tile", "settings": { "label": "Favorite Brands" } }
       ]
     }
   ]
