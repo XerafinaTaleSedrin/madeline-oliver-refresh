@@ -1,7 +1,8 @@
 {% comment %} Store info: NAP, hours, contact, socials + LocalBusiness JSON-LD (local GEO signal) for Madeline + Oliver. {% endcomment %}
 {%- style -%}
   .store-info { text-align: center; padding: 40px clamp(1.5rem, 5vw, 4rem) 12px; font-family: var(--font-body-family), sans-serif; }
-  .store-info__name { font-family: var(--font-heading-family), serif; font-size: clamp(1.4rem, 2.5vw, 1.9rem); margin: 0 0 0.6rem; letter-spacing: 0.02em; }
+  .store-info__name { font-family: var(--font-heading-family), serif; font-size: clamp(1.4rem, 2.5vw, 1.9rem); margin: 0 0 0.3rem; letter-spacing: 0.02em; }
+  .store-info__tagline { font-family: var(--font-heading-family), serif; font-style: italic; font-size: clamp(0.95rem, 1.6vw, 1.15rem); margin: 0 0 0.9rem; opacity: 0.9; }
   .store-info__rows { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem 1.5rem; font-size: 0.95rem; line-height: 1.5; }
   .store-info__rows a, .store-info__social a { color: inherit; text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 1px; }
   .store-info__hours { margin: 0.7rem 0 0; font-size: 0.9rem; opacity: 0.85; }
@@ -10,6 +11,7 @@
 
 <div class="store-info color-{{ section.settings.color_scheme }} gradient">
   <p class="store-info__name">Madeline + Oliver</p>
+  <p class="store-info__tagline">Everything you need for above and below the sheets</p>
   <div class="store-info__rows">
     <span><a href="https://maps.google.com/?q=460+Sun+Valley+Rd+E+Ste+102+Ketchum+ID+83340" target="_blank" rel="noopener">460 Sun Valley Rd E, Suite 102, Ketchum, ID 83340</a></span>
     <span><a href="tel:+12087267779">(208) 726-7779</a></span>
@@ -27,6 +29,7 @@
   "@context": "https://schema.org",
   "@type": "Store",
   "name": "Madeline + Oliver",
+  "description": "Everything you need for above and below the sheets — a Ketchum boutique of loungewear, lingerie, bedding, bath, gifts, and home.",
   "url": "https://madelineandoliver.com",
   "telephone": "+1-208-726-7779",
   "email": "madelineandoliver@gmail.com",
