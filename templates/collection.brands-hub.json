@@ -58,21 +58,21 @@
             "link": ""
           }
         },
-        "annie_selke": {
-          "type": "tile",
-          "settings": {
-            "label": "Annie Selke",
-            "asset_filename": "",
-            "collection": "annie-selke",
-            "link": ""
-          }
-        },
         "tcp": {
           "type": "tile",
           "settings": {
             "label": "Randimals",
             "asset_filename": "",
             "collection": "randimals",
+            "link": ""
+          }
+        },
+        "annie_selke": {
+          "type": "tile",
+          "settings": {
+            "label": "Annie Selke",
+            "asset_filename": "",
+            "collection": "annie-selke",
             "link": ""
           }
         },
@@ -110,8 +110,8 @@
         "eberjey",
         "cosabella",
         "dash_albert",
-        "annie_selke",
         "tcp",
+        "annie_selke",
         "magnetic_me",
         "tile_TN9TJP",
         "tile_Rt9ByB"
