@@ -1,0 +1,62 @@
+{% comment %} Store info: NAP, hours, contact, socials + LocalBusiness JSON-LD (local GEO signal) for Madeline + Oliver. {% endcomment %}
+{%- style -%}
+  .store-info { text-align: center; padding: 40px clamp(1.5rem, 5vw, 4rem) 12px; font-family: var(--font-body-family), sans-serif; }
+  .store-info__name { font-family: var(--font-heading-family), serif; font-size: clamp(1.4rem, 2.5vw, 1.9rem); margin: 0 0 0.6rem; letter-spacing: 0.02em; }
+  .store-info__rows { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem 1.5rem; font-size: 0.95rem; line-height: 1.5; }
+  .store-info__rows a, .store-info__social a { color: inherit; text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 1px; }
+  .store-info__hours { margin: 0.7rem 0 0; font-size: 0.9rem; opacity: 0.85; }
+  .store-info__social { margin-top: 0.85rem; display: flex; gap: 1.25rem; justify-content: center; font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase; }
+{%- endstyle -%}
+
+<div class="store-info color-{{ section.settings.color_scheme }} gradient">
+  <p class="store-info__name">Madeline + Oliver</p>
+  <div class="store-info__rows">
+    <span><a href="https://maps.google.com/?q=460+Sun+Valley+Rd+E+Ste+102+Ketchum+ID+83340" target="_blank" rel="noopener">460 Sun Valley Rd E, Suite 102, Ketchum, ID 83340</a></span>
+    <span><a href="tel:+12087267779">(208) 726-7779</a></span>
+    <span><a href="mailto:madelineandoliver@gmail.com">madelineandoliver@gmail.com</a></span>
+  </div>
+  <p class="store-info__hours">Open Mon–Sat 11–5:30 &middot; Sun 12–5</p>
+  <div class="store-info__social">
+    <a href="https://www.instagram.com/madelineandoliver/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.facebook.com/madelineandoliver/" target="_blank" rel="noopener">Facebook</a>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Madeline + Oliver",
+  "url": "https://madelineandoliver.com",
+  "telephone": "+1-208-726-7779",
+  "email": "madelineandoliver@gmail.com",
+  {%- if settings.logo != blank %}
+  "image": {{ settings.logo | image_url: width: 600 | prepend: 'https:' | json }},
+  "logo": {{ settings.logo | image_url: width: 600 | prepend: 'https:' | json }},
+  {%- endif %}
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "460 Sun Valley Rd E, Suite 102",
+    "addressLocality": "Ketchum",
+    "addressRegion": "ID",
+    "postalCode": "83340",
+    "addressCountry": "US"
+  },
+  "areaServed": ["Ketchum, ID", "Sun Valley, ID", "Hailey, ID", "Blaine County, ID"],
+  "priceRange": "$$",
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "11:00", "closes": "17:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "17:00" }
+  ],
+  "sameAs": ["https://www.instagram.com/madelineandoliver/", "https://www.facebook.com/madelineandoliver/"]
+}
+</script>
+
+{% schema %}
+{
+  "name": "Store info",
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-2" }
+  ]
+}
+{% endschema %}
