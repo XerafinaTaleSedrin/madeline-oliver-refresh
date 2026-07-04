@@ -1,6 +1,560 @@
+{% doc %}
+  @prompt
+    Create a 'Our Story' brand story section for the homepage of a luxury lifestyle boutique called Madeline   Oliver. The section should include:- A warm, premium headline like "20 Years of Curated Living"- A brief 2-3 sentence brand story: Founded in 2005 as Ketchum Bed 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-brand-story-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    padding: {{ block.settings.padding_top }}px 20px {{ block.settings.padding_bottom }}px;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-brand-story-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.container_width }}px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: {{ block.settings.content_gap }}px;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 750px) {
+    .ai-brand-story-container-{{ ai_gen_id }} {
+      grid-template-columns: {% if block.settings.layout == 'image_left' %}1fr 1fr{% elsif block.settings.layout == 'image_right' %}1fr 1fr{% else %}1fr{% endif %};
+      gap: {{ block.settings.content_gap | times: 1.5 }}px;
+    }
+
+    .ai-brand-story-container-{{ ai_gen_id }}.ai-layout-image-right-{{ ai_gen_id }} .ai-brand-story-image-wrapper-{{ ai_gen_id }} {
+      order: 2;
+    }
+
+    .ai-brand-story-container-{{ ai_gen_id }}.ai-layout-image-right-{{ ai_gen_id }} .ai-brand-story-content-{{ ai_gen_id }} {
+      order: 1;
+    }
+  }
+
+  .ai-brand-story-image-wrapper-{{ ai_gen_id }} {
+    width: 100%;
+    position: relative;
+  }
+
+  .ai-brand-story-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    object-fit: cover;
+  }
+
+  .ai-brand-story-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: #f4f4f4;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-brand-story-image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-brand-story-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .ai-brand-story-content-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.text_spacing }}px;
+    text-align: {{ block.settings.text_alignment }};
+  }
+
+  .ai-brand-story-eyebrow-{{ ai_gen_id }} {
+    font-size: {{ block.settings.eyebrow_size }}px;
+    color: {{ block.settings.eyebrow_color }};
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .ai-brand-story-heading-{{ ai_gen_id }} {
+    font-size: {{ block.settings.heading_size }}px;
+    color: {{ block.settings.heading_color }};
+    font-family: {{ block.settings.heading_font.family }}, {{ block.settings.heading_font.fallback_families }};
+    font-weight: {{ block.settings.heading_font.weight }};
+    font-style: {{ block.settings.heading_font.style }};
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .ai-brand-story-text-{{ ai_gen_id }} {
+    font-size: {{ block.settings.text_size }}px;
+    color: {{ block.settings.text_color }};
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .ai-brand-story-text-{{ ai_gen_id }} p {
+    margin: 0 0 1em;
+  }
+
+  .ai-brand-story-text-{{ ai_gen_id }} p:last-child {
+    margin-bottom: 0;
+  }
+
+  .ai-brand-story-button-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: {{ block.settings.button_padding_vertical }}px {{ block.settings.button_padding_horizontal }}px;
+    background-color: {{ block.settings.button_background }};
+    color: {{ block.settings.button_text_color }};
+    text-decoration: none;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-size: {{ block.settings.button_text_size }}px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: {{ block.settings.button_border_width }}px solid {{ block.settings.button_border_color }};
+    {% if block.settings.text_alignment == 'center' %}
+      margin: 0 auto;
+    {% elsif block.settings.text_alignment == 'right' %}
+      margin-left: auto;
+    {% endif %}
+  }
+
+  .ai-brand-story-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_background_hover }};
+    color: {{ block.settings.button_text_color_hover }};
+    border-color: {{ block.settings.button_border_color_hover }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-brand-story-heading-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.heading_size }}px * 0.8);
+    }
+
+    .ai-brand-story-text-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.text_size }}px * 0.95);
+    }
+
+    .ai-brand-story-content-{{ ai_gen_id }} {
+      text-align: {{ block.settings.mobile_text_alignment }};
+    }
+
+    .ai-brand-story-button-{{ ai_gen_id }} {
+      {% if block.settings.mobile_text_alignment == 'center' %}
+        margin: 0 auto;
+      {% elsif block.settings.mobile_text_alignment == 'right' %}
+        margin-left: auto;
+      {% elsif block.settings.mobile_text_alignment == 'left' %}
+        margin-right: auto;
+      {% endif %}
+    }
+  }
+{% endstyle %}
+
+<brand-story-{{ ai_gen_id }} class="ai-brand-story-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-brand-story-container-{{ ai_gen_id }} ai-layout-{{ block.settings.layout }}-{{ ai_gen_id }}">
+    {% if block.settings.layout != 'text_only' %}
+      <div class="ai-brand-story-image-wrapper-{{ ai_gen_id }}">
+        {% if block.settings.image %}
+          <img
+            src="{{ block.settings.image | image_url: width: 1200 }}"
+            alt="{{ block.settings.image.alt | escape }}"
+            loading="lazy"
+            width="{{ block.settings.image.width }}"
+            height="{{ block.settings.image.height }}"
+            class="ai-brand-story-image-{{ ai_gen_id }}"
+          >
+        {% else %}
+          <div class="ai-brand-story-image-placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+            <div class="ai-brand-story-empty-state-{{ ai_gen_id }}">
+              Add an image to bring your story to life
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="ai-brand-story-content-{{ ai_gen_id }}">
+      {% if block.settings.eyebrow != blank %}
+        <p class="ai-brand-story-eyebrow-{{ ai_gen_id }}">{{ block.settings.eyebrow }}</p>
+      {% endif %}
+
+      {% if block.settings.heading != blank %}
+        <h2 class="ai-brand-story-heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+      {% endif %}
+
+      {% if block.settings.text != blank %}
+        <div class="ai-brand-story-text-{{ ai_gen_id }}">{{ block.settings.text }}</div>
+      {% endif %}
+
+      {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+        <a href="{{ block.settings.button_link }}" class="ai-brand-story-button-{{ ai_gen_id }}">
+          {{ block.settings.button_text }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</brand-story-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class BrandStory{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+      }
+    }
+
+    customElements.define('brand-story-{{ ai_gen_id }}', BrandStory{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Our story",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "image_left",
+          "label": "Image left"
+        },
+        {
+          "value": "image_right",
+          "label": "Image right"
+        },
+        {
+          "value": "text_only",
+          "label": "Text only"
+        }
+      ],
+      "default": "image_left"
+    },
+    {
+      "type": "range",
+      "id": "container_width",
+      "label": "Container width",
+      "min": 600,
+      "max": 1400,
+      "step": 100,
+      "unit": "px",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "content_gap",
+      "label": "Content gap",
+      "min": 20,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#faf6f1"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow text",
+      "default": "Est. 2005"
+    },
+    {
+      "type": "range",
+      "id": "eyebrow_size",
+      "label": "Eyebrow size",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "color",
+      "id": "eyebrow_color",
+      "label": "Eyebrow color",
+      "default": "#ff5a8c"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "20 Years of Curated Living"
+    },
+    {
+      "type": "font_picker",
+      "id": "heading_font",
+      "label": "Heading font",
+      "default": "cormorant_n4"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading size",
+      "min": 24,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#2c2420"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Story text",
+      "default": "<p>Founded in 2005 as Ketchum Bed & Bath, we began with a simple mission: to bring thoughtfully curated home essentials to our community. Over two decades, we've evolved into Madeline & Oliver, a luxury lifestyle boutique celebrating the art of refined living through premium sleepwear, loungewear, and carefully selected home treasures.</p>"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "Text size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#2c2420"
+    },
+    {
+      "type": "range",
+      "id": "text_spacing",
+      "label": "Text spacing",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Desktop text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "mobile_text_alignment",
+      "label": "Mobile text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Learn more"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "range",
+      "id": "button_text_size",
+      "label": "Text size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "button_padding_vertical",
+      "label": "Vertical padding",
+      "min": 8,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "button_padding_horizontal",
+      "label": "Horizontal padding",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "button_border_width",
+      "label": "Border width",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "default": 1
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Background",
+      "default": "#ff5a8c"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Text color",
+      "default": "#faf6f1"
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Border color",
+      "default": "#ff5a8c"
+    },
+    {
+      "type": "color",
+      "id": "button_background_hover",
+      "label": "Hover background",
+      "default": "#2c2420"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color_hover",
+      "label": "Hover text color",
+      "default": "#faf6f1"
+    },
+    {
+      "type": "color",
+      "id": "button_border_color_hover",
+      "label": "Hover border color",
+      "default": "#2c2420"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Our story"
+    }
+  ]
+}
 {% endschema %}
