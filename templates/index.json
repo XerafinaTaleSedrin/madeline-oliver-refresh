@@ -255,11 +255,41 @@
         "ai_gen_block_128235f_AbPCLF"
       ],
       "settings": {}
+    },
+    "1789393343f687f497": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_e594e4a_RNzt4b": {
+          "type": "ai_gen_block_e594e4a",
+          "settings": {
+            "progress_message": "You're [amount] away from free shipping!",
+            "unlocked_message": "🎉 You've unlocked free shipping!",
+            "threshold": 100,
+            "desktop_width_percent": 100,
+            "body_font": "montserrat_n4",
+            "text_alignment": "left",
+            "background_color": "#faf6f1",
+            "text_color": "#2c2420",
+            "border_color": "#e0d8cf",
+            "track_color": "#e0d8cf",
+            "fill_color": "#ff5a8c",
+            "unlocked_color": "#2c2420",
+            "bar_height": 8,
+            "border_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_e594e4a_RNzt4b"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "slideshow_3d9L3m",
     "category_hub",
-    "1783137814f351957f"
+    "1783137814f351957f",
+    "1789393343f687f497"
   ]
 }
