@@ -14,6 +14,7 @@
       "blocks": {
         "slide_bmJY8x": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/for_her_1_88f1639f-1e48-4823-a984-e062329a11c6.png",
             "image_overlay_opacity": 0,
