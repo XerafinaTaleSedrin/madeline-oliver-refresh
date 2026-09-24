@@ -179,7 +179,6 @@
           "type": "tile",
           "settings": {
             "label": "Favorite Brands",
-            "image": "{{ block.settings.collection.image }}",
             "asset_filename": "tile-favorite-brands.jpg",
             "collection": "our-favorite-brands",
             "link": ""
