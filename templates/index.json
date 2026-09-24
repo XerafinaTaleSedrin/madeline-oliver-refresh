@@ -18,10 +18,10 @@
             "image": "shopify://shop_images/for_her_1_88f1639f-1e48-4823-a984-e062329a11c6.png",
             "image_overlay_opacity": 0,
             "text_box_opacity": 65,
-            "heading": "What's New at M + O",
+            "heading": "Thoughtfully Chosen for You & Your Home",
             "heading_size": "h1",
-            "subheading": "Freshen up your home and closet",
-            "button_label": "Shop the Latest",
+            "subheading": "Discover considered essentials, beautiful finds, and meaningful gifts—curated with care at Madeline & Oliver.",
+            "button_label": "Explore New Arrivals",
             "link": "shopify://collections/new-1",
             "button_style_secondary": false,
             "show_text_box": true,
@@ -195,17 +195,46 @@
         "favorite_brands"
       ],
       "settings": {
-        "heading": "",
+        "heading": "Shop by What You Love",
         "aspect_ratio": "1 / 1",
         "columns_desktop": 2,
-        "gap": 70,
-        "padding_vertical": 80,
+        "gap": 40,
+        "padding_vertical": 56,
         "max_width": 1400,
         "card_corner_radius": 30,
         "card_background": "#f0ebe3",
         "label_color": "#2c2420",
         "label_font_size": 1.2
       }
+    },
+    "1789393343f687f497": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_e594e4a_RNzt4b": {
+          "type": "ai_gen_block_e594e4a",
+          "settings": {
+            "progress_message": "You’re [amount] away from complimentary shipping.",
+            "unlocked_message": "Complimentary shipping is yours—enjoy your order.",
+            "threshold": 100,
+            "desktop_width_percent": 100,
+            "body_font": "montserrat_n4",
+            "text_alignment": "center",
+            "background_color": "#faf6f1",
+            "text_color": "#2c2420",
+            "border_color": "#e0d8cf",
+            "track_color": "#e0d8cf",
+            "fill_color": "#ff5a8c",
+            "unlocked_color": "#2c2420",
+            "bar_height": 8,
+            "border_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_e594e4a_RNzt4b"
+      ],
+      "settings": {}
     },
     "1783137814f351957f": {
       "type": "_blocks",
@@ -255,41 +284,12 @@
         "ai_gen_block_128235f_AbPCLF"
       ],
       "settings": {}
-    },
-    "1789393343f687f497": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_e594e4a_RNzt4b": {
-          "type": "ai_gen_block_e594e4a",
-          "settings": {
-            "progress_message": "You're [amount] away from free shipping!",
-            "unlocked_message": "🎉 You've unlocked free shipping!",
-            "threshold": 100,
-            "desktop_width_percent": 100,
-            "body_font": "montserrat_n4",
-            "text_alignment": "left",
-            "background_color": "#faf6f1",
-            "text_color": "#2c2420",
-            "border_color": "#e0d8cf",
-            "track_color": "#e0d8cf",
-            "fill_color": "#ff5a8c",
-            "unlocked_color": "#2c2420",
-            "bar_height": 8,
-            "border_radius": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_e594e4a_RNzt4b"
-      ],
-      "settings": {}
     }
   },
   "order": [
     "slideshow_3d9L3m",
     "category_hub",
-    "1783137814f351957f",
-    "1789393343f687f497"
+    "1789393343f687f497",
+    "1783137814f351957f"
   ]
 }
