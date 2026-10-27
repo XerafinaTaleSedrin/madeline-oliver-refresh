@@ -145,7 +145,7 @@
           "type": "tile",
           "settings": {
             "label": "For Him",
-            "image": "shopify://shop_images/Mens_Bamboo_Stretch_Knit_Long_Sleeve_Navy_1_98f2efff-071a-4acd-854b-abb088b67533.jpg",
+            "image": "shopify://shop_images/mens-cozy-earth-mountain-lifestyle-photo.png",
             "asset_filename": "tile-for-him.jpg",
             "collection": "for-him",
             "link": ""
@@ -165,6 +165,7 @@
           "type": "tile",
           "settings": {
             "label": "For the Home",
+            "image": "shopify://shop_images/dash-and-albert-framboise-woven-cotton-rug-4_1024x1024_c1bbb06f-e29c-4a6f-81b1-d4f4833aaae8.jpg",
             "asset_filename": "tile-for-the-home.jpg",
             "collection": "home-decor",
             "link": ""
