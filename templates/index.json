@@ -134,8 +134,8 @@
         "for_her": {
           "type": "tile",
           "settings": {
-            "label": "For Her",
-            "image": "shopify://shop_images/1740097345620_00cbb311-9d00-4ede-b1e0-9042e1be6e30.png",
+            "label": "Eberjey Holiday Pajamas",
+            "image": "shopify://shop_images/holiday-dogs-pajama-lifestyle-photo.png",
             "asset_filename": "tile-for-her.jpg",
             "collection": "for-her",
             "link": ""
@@ -183,6 +183,7 @@
           "type": "tile",
           "settings": {
             "label": "Favorite Brands",
+            "image": "shopify://shop_images/e6ddd8c67588742ec0ef58288a8d3ae7.png",
             "asset_filename": "tile-favorite-brands.jpg",
             "collection": "our-favorite-brands",
             "link": ""
@@ -205,8 +206,8 @@
         "padding_vertical": 56,
         "max_width": 1400,
         "card_corner_radius": 30,
-        "card_background": "#f0ebe3",
-        "label_color": "#2c2420",
+        "card_background": "#7a342e",
+        "label_color": "#fff8f0",
         "label_font_size": 1.2
       }
     },
