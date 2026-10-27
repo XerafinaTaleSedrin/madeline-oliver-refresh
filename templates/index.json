@@ -134,11 +134,11 @@
         "for_her": {
           "type": "tile",
           "settings": {
-            "label": "Eberjey Holiday Pajamas",
-            "image": "shopify://shop_images/holiday-dogs-pajama-lifestyle-photo.png",
+            "label": "Holiday Stripe Pajamas",
+            "image": "shopify://shop_images/red-white-stripe-holiday-lifestyle.png",
             "asset_filename": "tile-for-her.jpg",
             "collection": "for-her",
-            "link": ""
+            "link": "shopify://products/8855430201565"
           }
         },
         "for_him": {
@@ -185,7 +185,7 @@
           "type": "tile",
           "settings": {
             "label": "Favorite Brands",
-            "image": "shopify://shop_images/e6ddd8c67588742ec0ef58288a8d3ae7.png",
+            "image": "shopify://shop_images/gabrielle-sanchez-pearls-enhanced.png",
             "asset_filename": "tile-favorite-brands.jpg",
             "collection": "our-favorite-brands",
             "link": ""
