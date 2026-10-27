@@ -175,6 +175,7 @@
           "type": "tile",
           "settings": {
             "label": "Special Occasions",
+            "image": "shopify://shop_images/eberjey-bridal-getting-ready-lifestyle-photo.png",
             "asset_filename": "tile-special-occasions.jpg",
             "collection": "gifts",
             "link": ""
