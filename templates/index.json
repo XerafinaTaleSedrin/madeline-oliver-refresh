@@ -135,6 +135,7 @@
           "type": "tile",
           "settings": {
             "label": "For Her",
+            "image": "shopify://shop_images/1731978776003_17a24a26-02e8-43c4-bc1a-12d94b27a01c.png",
             "asset_filename": "tile-for-her.jpg",
             "collection": "for-her",
             "link": ""
@@ -154,6 +155,7 @@
           "type": "tile",
           "settings": {
             "label": "For Little Ones",
+            "image": "shopify://shop_images/2108-BabyPlaidOvershirt-059Blue-01_1b9692fe-8957-416c-b59f-9b0e7644516f.png",
             "asset_filename": "tile-for-little-ones.jpg",
             "collection": "kids",
             "link": "shopify://collections/kids"
