@@ -144,6 +144,7 @@
           "type": "tile",
           "settings": {
             "label": "For Him",
+            "image": "shopify://shop_images/Mens_Bamboo_Stretch_Knit_Long_Sleeve_Navy_1_98f2efff-071a-4acd-854b-abb088b67533.jpg",
             "asset_filename": "tile-for-him.jpg",
             "collection": "for-him",
             "link": ""
