@@ -213,6 +213,49 @@
         "label_font_size": 1.4
       }
     },
+    "rich_text_RXwhpy": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_BydKKm": {
+          "type": "heading",
+          "settings": {
+            "heading": "A thoughtful gift at every price",
+            "heading_size": "h2"
+          }
+        },
+        "text_ER3q6e": {
+          "type": "text",
+          "settings": {
+            "text": "<p><a href=\"/collections/513949303005\">Gifts Under $25</a></p><p><a href=\"/collections/513949368541\">Gifts $25 to $50</a></p><p><a href=\"/collections/513949401309\">Gifts $50 to $100</a></p><p><a href=\"/collections/513949434077\">Gifts $100 & Up</a></p>"
+          }
+        },
+        "button_EmDr8A": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_BydKKm",
+        "text_ER3q6e",
+        "button_EmDr8A"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
     "1789393343f687f497": {
       "type": "_blocks",
       "blocks": {
@@ -295,6 +338,7 @@
   "order": [
     "slideshow_3d9L3m",
     "category_hub",
+    "rich_text_RXwhpy",
     "1789393343f687f497",
     "1783137814f351957f"
   ]
