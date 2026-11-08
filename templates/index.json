@@ -14,9 +14,8 @@
       "blocks": {
         "slide_bmJY8x": {
           "type": "slide",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/for_her_1_88f1639f-1e48-4823-a984-e062329a11c6.png",
+            "image": "shopify://shop_images/madeline-oliver-blush-mountain-5962177a.png",
             "image_overlay_opacity": 0,
             "text_box_opacity": 65,
             "heading": "Thoughtful gifts. Beautiful everyday luxuries.",
@@ -26,8 +25,8 @@
             "link": "shopify://collections/gifts",
             "button_style_secondary": false,
             "show_text_box": true,
-            "box_align": "middle-center",
-            "text_alignment": "center",
+            "box_align": "middle-left",
+            "text_alignment": "left",
             "text_alignment_mobile": "center",
             "color_scheme": "scheme-1"
           }
