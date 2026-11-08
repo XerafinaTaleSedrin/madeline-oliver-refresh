@@ -220,7 +220,7 @@
         "collection": "gifts",
         "products_to_show": 4,
         "title": "Discover your next thoughtful gift",
-        "heading_size": "h2",
+        "heading_size": "h0",
         "description": "",
         "show_description": false,
         "description_style": "body",
