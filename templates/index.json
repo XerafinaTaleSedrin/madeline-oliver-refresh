@@ -44,7 +44,7 @@
             "link": "shopify://collections/kai",
             "button_style_secondary": false,
             "show_text_box": true,
-            "box_align": "middle-center",
+            "box_align": "top-center",
             "text_alignment": "center",
             "text_alignment_mobile": "center",
             "color_scheme": "scheme-1"
