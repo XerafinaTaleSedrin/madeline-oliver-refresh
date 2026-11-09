@@ -183,8 +183,8 @@
         "favorite_brands": {
           "type": "tile",
           "settings": {
-            "label": "Favorite Brands",
-            "image": "shopify://shop_images/gabrielle-sanchez-pearls-enhanced.png",
+            "label": "Discover Our Brands",
+            "image": "shopify://shop_images/discover-brands-gift-basket-91e63d00.png",
             "asset_filename": "tile-favorite-brands.jpg",
             "collection": "our-favorite-brands",
             "link": ""
