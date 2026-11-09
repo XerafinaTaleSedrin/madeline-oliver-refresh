@@ -43,7 +43,7 @@
           "type": "tile",
           "settings": {
             "label": "Wedding Gifts",
-            "image": "{{ block.settings.collection.image }}",
+            "image": "shopify://shop_images/weddingregistry_d9a9a02b-7716-4976-9ccd-bc0f387e8e1b.jpg",
             "asset_filename": "",
             "collection": "wedding-gifts",
             "link": ""
@@ -72,7 +72,11 @@
         "columns_desktop": 4,
         "gap": 24,
         "padding_vertical": 48,
-        "max_width": 1400
+        "max_width": 1400,
+        "card_corner_radius": 30,
+        "card_background": "#f0ebe3",
+        "label_color": "#2c2420",
+        "label_font_size": 1.2
       }
     },
     "product-grid": {
