@@ -34,7 +34,7 @@
       "settings": {
         "color_scheme": "scheme-2",
         "newsletter_enable": true,
-        "newsletter_heading": "",
+        "newsletter_heading": "A little something lovely in your inbox",
         "enable_follow_on_shop": true,
         "show_social": false,
         "enable_country_selector": false,
