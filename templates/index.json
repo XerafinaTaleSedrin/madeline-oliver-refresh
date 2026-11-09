@@ -207,8 +207,8 @@
         "padding_vertical": 56,
         "max_width": 1400,
         "card_corner_radius": 30,
-        "card_background": "#454d32",
-        "label_color": "#fff8f0",
+        "card_background": "#a8b396",
+        "label_color": "#303823",
         "label_font_size": 1.4
       }
     },
@@ -255,13 +255,13 @@
         "text_ER3q6e": {
           "type": "text",
           "settings": {
-            "text": "<p><a href=\"/collections/513949303005\">Gifts Under $25</a></p><p><a href=\"/collections/513949368541\">Gifts $25 to $50</a></p><p><a href=\"/collections/513949401309\">Gifts $50 to $100</a></p><p><a href=\"/collections/513949434077\">Gifts $100 & Up</a></p>"
+            "text": "<p><a href=\"/collections/gifts-under-25\">Gifts Under $25</a></p><p><a href=\"/collections/gifts-25-to-50\">Gifts $25 to $50</a></p><p><a href=\"/collections/gifts-50-to-100\">Gifts $50 to $100</a></p><p><a href=\"/collections/gifts-100-up\">Gifts $100 & Up</a></p>"
           }
         },
         "button_EmDr8A": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "",
             "button_link": "",
             "button_style_secondary": false,
             "button_label_2": "",
