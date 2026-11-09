@@ -91,13 +91,13 @@
         "slide_afcRLR": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/rugs.jpg",
+            "image": "shopify://shop_images/dash-albert-framboise-collie-c2b61fd9.png",
             "image_overlay_opacity": 0,
             "text_box_opacity": 65,
             "heading": "Dash & Albert Rugs",
             "heading_size": "h0",
-            "subheading": "Idaho's only authorized Dash & Albert vendor. Free sample rugs available in store",
-            "button_label": "Shop Dash & Albert",
+            "subheading": "Explore Dash & Albert rugs at our Ketchum boutique. Visit us to view samples and find the right fit for your home.",
+            "button_label": "Explore Dash & Albert",
             "link": "shopify://collections/dash-albert",
             "button_style_secondary": false,
             "show_text_box": true,
