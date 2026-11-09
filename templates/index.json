@@ -207,7 +207,7 @@
         "padding_vertical": 56,
         "max_width": 1400,
         "card_corner_radius": 30,
-        "card_background": "#7a342e",
+        "card_background": "#454d32",
         "label_color": "#fff8f0",
         "label_font_size": 1.4
       }
