@@ -173,10 +173,10 @@
         "special_occasions": {
           "type": "tile",
           "settings": {
-            "label": "Gifts",
+            "label": "For Self-Care",
             "image": "shopify://shop_images/eberjey-bridal-getting-ready-lifestyle-photo.png",
             "asset_filename": "tile-special-occasions.jpg",
-            "collection": "gifts",
+            "collection": "self-care-picks",
             "link": ""
           }
         },
