@@ -24,7 +24,7 @@
     endif
   -%}
   {%- paginate collections by paginate_by -%}
-    <ul
+    <ul id="CollectionList"
       class="collection-list grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
       role="list"
     >
@@ -44,7 +44,7 @@
         </li>
       {%- endfor -%}
     </ul>
-    {% render 'pagination', paginate: paginate %}
+    {% render 'pagination', paginate: paginate, anchor: '#CollectionList' %}
   {%- endpaginate -%}
 </div>
 {% schema %}
