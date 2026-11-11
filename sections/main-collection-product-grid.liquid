@@ -125,11 +125,21 @@
         {% endif %}
       >
         {%- if collection.handle == 'kids' -%}
+          {%- assign current_brand = blank -%}
+          {%- for filter in collection.filters -%}
+            {%- if filter.param_name == 'filter.p.vendor' -%}
+              {%- for value in filter.values -%}
+                {%- if value.active -%}
+                  {%- assign current_brand = value.label -%}
+                {%- endif -%}
+              {%- endfor -%}
+            {%- endif -%}
+          {%- endfor -%}
           <div class="kids-brand-links">
             <span class="kids-brand-links__label">Shop by brand:</span>
-            <a href="{{ collection.url }}#ProductGridContainer" class="kids-brand-links__link{% if collection.current_vendor == blank %} kids-brand-links__link--active{% endif %}">All brands</a>
+            <a href="{{ collection.url }}#ProductGridContainer" class="kids-brand-links__link{% if current_brand == blank %} kids-brand-links__link--active{% endif %}">All brands</a>
             {%- for vendor in collection.all_vendors -%}
-              <a href="{{ collection.url }}?filter.p.vendor={{ vendor | url_encode }}#ProductGridContainer" class="kids-brand-links__link{% if collection.current_vendor == vendor %} kids-brand-links__link--active{% endif %}">{{ vendor }}</a>
+              <a href="{{ collection.url }}?filter.p.vendor={{ vendor | url_encode }}#ProductGridContainer" class="kids-brand-links__link{% if current_brand == vendor %} kids-brand-links__link--active{% endif %}">{{ vendor }}</a>
             {%- endfor -%}
           </div>
           <style>
