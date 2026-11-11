@@ -124,7 +124,7 @@
           data-cascade
         {% endif %}
       >
-        {%- if collection.handle == 'kids' -%}
+        {%- if collection.handle == 'kids' or collection.handle == 'lingerie' or collection.handle == 'toys' or collection.handle == 'baby-clothing' -%}
           {%- assign current_brand = blank -%}
           {%- for filter in collection.filters -%}
             {%- if filter.param_name == 'filter.p.vendor' -%}
