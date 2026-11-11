@@ -320,7 +320,7 @@
                 {%- endfor -%}
               </ul>
               {%- if paginate.pages > 1 -%}
-                {% render 'pagination', paginate: paginate %}
+                {% render 'pagination', paginate: paginate, anchor: '#ProductGridContainer' %}
               {%- endif -%}
             </div>
           {%- endif -%}
