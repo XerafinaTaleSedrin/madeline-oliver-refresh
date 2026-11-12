@@ -63,6 +63,7 @@
           "type": "tile",
           "settings": {
             "label": "Randimals",
+            "image": "shopify://shop_images/randimals-group-hork-20261111.jpg",
             "asset_filename": "",
             "collection": "randimals",
             "link": ""
