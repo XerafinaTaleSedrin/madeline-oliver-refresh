@@ -52,10 +52,11 @@
         "dash_albert": {
           "type": "tile",
           "settings": {
-            "label": "Dash & Albert",
+            "label": "Natori",
+            "image": "shopify://shop_images/PureLuxeCustomCoverageContourUnderwire-BLACK4_46294ff4-1112-4aee-8c63-ac156115affc.png",
             "asset_filename": "",
-            "collection": "dash-albert",
-            "link": ""
+            "collection": "",
+            "link": "https://madelineandoliver.com/products/pure-luxe-custom-coverage-contour-underwire-bra-natori"
           }
         },
         "tcp": {
@@ -89,18 +90,20 @@
         "tile_TN9TJP": {
           "type": "tile",
           "settings": {
-            "label": "Finn + Emma",
+            "label": "Mayoral",
+            "image": "shopify://shop_images/2380073HStoneJacquardknittingpullover-01.png",
             "asset_filename": "",
-            "collection": "finn-emma",
-            "link": ""
+            "collection": "",
+            "link": "https://madelineandoliver.com/products/baby-knit-zip-up-sweatshirt-with-teddy-bears-mayoral"
           }
         },
         "tile_Rt9ByB": {
           "type": "tile",
           "settings": {
-            "label": "Pullin",
+            "label": "The Cat's Pajamas",
+            "image": "shopify://shop_images/1726435583892.png",
             "asset_filename": "",
-            "collection": "pullin",
+            "collection": "the-cats-pajamas",
             "link": ""
           }
         }
